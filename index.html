@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="der See и die See, der Leiter и die Leiter, das Band и die Band: немецкие слова, у которых артикль меняет смысл. Гайд-брендбук с анимациями от Stellas.">
+<meta property="og:title" content="Слова с двумя артиклями: der See и die See">
+<meta property="og:description" content="der See и die See, der Leiter и die Leiter, das Band и die Band: немецкие слова, у которых артикль меняет смысл. Гайд-брендбук с анимациями от Stellas.">
+<meta name="theme-color" content="#F3EEE8">
+<link rel="icon" href="media/logo.webp">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<title>Слова с двумя артиклями: der See и die See</title>
+<link rel="preload" href="assets/fonts/oswald-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Jost';font-style:normal;font-weight:300 600;font-display:swap;src:url(assets/fonts/jost-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Jost';font-style:normal;font-weight:300 600;font-display:swap;src:url(assets/fonts/jost-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/oswald-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+@font-face{font-family:'Oswald';font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/oswald-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+</style>
+<script defer src="assets/gsap-bundle.min.js"></script>
+
+<style>
+:root{
+  --table:#EFE9E2; --page:#FDFBF8; --cream:#EFE0D5; --kraft:#C4A27A; --kraft2:#B08C63;
+  --or:#D8845A; --red:#88483C; --gr:#3E4E3D; --pink:#E1A598; --ink:#152217; --ol:#717054; --terra:#CA7663;
+  --txt:#2B2F2A; --mute:#7B7C72; --line:#E6DED4; --x:#C9473B;
+  --gut:16px;
+  --fh:'Oswald', 'Arial Narrow', sans-serif; --f:'Jost', system-ui, sans-serif;
+  --sh:0 30px 50px -34px rgba(60,40,20,.45), 0 2px 6px rgba(60,40,20,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--table);color:var(--txt);font:400 16px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+main{overflow-x:clip;position:relative}
+img,video{display:block;max-width:100%}
+a{color:var(--red)}
+button{font:inherit;cursor:pointer;color:inherit}
+b,strong{font-weight:600;color:var(--ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 var(--gut);position:relative}
+.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.14em}
+section{position:relative;padding:56px 0}
+.de{font-family:var(--f);font-weight:500}
+
+/* wordmark: Т with a double bar, like the festival logo */
+.wm{font:700 1em/.9 var(--fh);text-transform:uppercase;letter-spacing:.01em}
+.wm .t{position:relative;display:inline-block}
+.wm .t::after{content:"";position:absolute;left:12%;right:12%;top:46%;height:.085em;background:currentColor}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:40;background:rgba(239,233,226,.92);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand img{width:26px;height:26px}
+.brand .wm{font-size:15px}
+.brand small{display:block;font:500 9px/1.1 var(--f);letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.prog{position:absolute;left:0;bottom:-1px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--or),var(--red) 40%,var(--gr) 80%)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:4px;padding:15px 22px;text-decoration:none;font:600 15px/1 var(--fh);letter-spacing:.06em;text-transform:uppercase;background:var(--gr);color:var(--cream);box-shadow:0 4px 0 #2A362A;transition:translate .15s,box-shadow .15s}
+.btn:hover{translate:0 -2px}
+.btn:active{translate:0 3px;box-shadow:0 1px 0 #2A362A}
+.btn.or{background:var(--or);color:#fff;box-shadow:0 4px 0 #B0623C}
+.btn.red{background:var(--red);color:var(--cream);box-shadow:0 4px 0 #66322A}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor;color:var(--gr)}
+.btn.big{padding:19px 28px;font-size:17px}
+.btn.sm{padding:11px 14px;font-size:13px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:2px;background:var(--cream);color:var(--red);font:500 12.5px var(--f)}
+.say{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;border:0;background:var(--cream);color:var(--red);flex:none;transition:background .2s,scale .2s}
+.say:hover{background:var(--pink)}
+.say.on{background:var(--red);color:#fff;scale:1.08}
+.say svg{width:16px;height:16px}
+.no-tts .say{display:none}
+
+/* book page */
+.pg{position:relative;background:var(--page);border-radius:3px;box-shadow:var(--sh);padding:26px 20px 18px}
+.pg::before{content:"";position:absolute;inset:0;border-radius:3px;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.05),transparent 3%,transparent 97%,rgba(0,0,0,.04))}
+.sh{display:flex;align-items:baseline;gap:10px;margin:0 0 18px;font:400 clamp(22px,6vw,34px)/1.1 var(--f);text-transform:uppercase;color:var(--ink);letter-spacing:.01em}
+.sh .no{font-weight:400}
+.sh2{font:500 18px/1.25 var(--f);color:var(--ink);margin:0 0 8px}
+.pg p.tx{font-size:15px;color:#4a4b44;margin:0 0 12px;max-width:52ch}
+.pf{display:flex;justify-content:space-between;gap:12px;margin-top:22px;font:400 10.5px var(--f);color:#9a9a90}
+.pf i{font-style:normal}
+.h2{font:700 clamp(32px,9vw,64px)/.95 var(--fh);text-transform:uppercase;color:var(--ink);margin:0 0 14px;letter-spacing:.005em}
+.h2 .wd{display:inline-block}
+.h2 .c-or{color:var(--or)} .h2 .c-red{color:var(--red)} .h2 .c-gr{color:var(--gr)}
+.lede{font-size:17px;color:#55564d;max-width:46ch;margin:0 0 22px}
+.kick{display:inline-flex;align-items:center;gap:8px;font:500 12px var(--f);letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+@media(min-width:900px){
+  .spread{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:40px 44px 24px}
+  .spread::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:60px;margin-left:-30px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.07) 48%,rgba(255,255,255,.6) 52%,transparent);pointer-events:none}
+  .spread .pf{grid-column:1/-1}
+}
+
+/* crop marks */
+.crop{position:relative}
+.crop::before,.crop::after{content:"";position:absolute;inset:-12px;pointer-events:none;
+  background:
+   linear-gradient(#2b2b2b,#2b2b2b) 12px 0/1px 8px no-repeat, linear-gradient(#2b2b2b,#2b2b2b) 0 12px/8px 1px no-repeat,
+   linear-gradient(#2b2b2b,#2b2b2b) calc(100% - 12px) 0/1px 8px no-repeat, linear-gradient(#2b2b2b,#2b2b2b) 100% 12px/8px 1px no-repeat,
+   linear-gradient(#2b2b2b,#2b2b2b) 12px 100%/1px 8px no-repeat, linear-gradient(#2b2b2b,#2b2b2b) 0 calc(100% - 12px)/8px 1px no-repeat,
+   linear-gradient(#2b2b2b,#2b2b2b) calc(100% - 12px) 100%/1px 8px no-repeat, linear-gradient(#2b2b2b,#2b2b2b) 100% calc(100% - 12px)/8px 1px no-repeat;opacity:.55}
+
+/* ornament strokes */
+.orn{position:absolute;pointer-events:none;z-index:0;overflow:visible}
+.orn path{fill:none;stroke-width:12;stroke-linecap:butt;stroke-linejoin:miter}
+
+/* HERO / cover */
+.hero{padding:26px 0 40px}
+.desk{position:relative;max-width:560px;margin:0 auto}
+.emb{position:absolute;left:-22%;top:-6%;width:62%;height:112%;border-radius:2px;background-color:#e9dcc8;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg fill='%2388483C'%3E%3Cpath d='M14 3l3 3-3 3-3-3zM14 19l3 3-3 3-3-3zM3 14l3-3 3 3-3 3zM19 14l3-3 3 3-3 3z'/%3E%3Crect x='12' y='12' width='4' height='4'/%3E%3C/g%3E%3C/svg%3E");rotate:-8deg;box-shadow:var(--sh)}
+.cover{position:relative;aspect-ratio:4/3.1;border-radius:3px;overflow:hidden;background:var(--kraft);box-shadow:0 40px 60px -30px rgba(60,35,10,.6);rotate:-2.5deg;animation:cov 1s cubic-bezier(.2,.9,.25,1.15) both}
+.cover::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes cov{from{opacity:0;translate:0 60px;rotate:-9deg}}
+.label{position:absolute;left:7%;top:7%;width:58%;padding:14px 16px 13px;background:#1d201d;color:#f2ece4;rotate:-11deg;box-shadow:0 16px 24px -14px rgba(0,0,0,.7);animation:lab 1s .35s cubic-bezier(.2,.9,.25,1.3) both}
+.label::after{content:"";position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.label .wm{display:block;font-size:clamp(25px,7.4vw,44px)}
+.label small{display:block;margin-top:6px;font:500 clamp(9px,2.4vw,12px)/1.25 var(--f);letter-spacing:.06em;text-transform:uppercase;color:#cfc6b8}
+@keyframes lab{from{opacity:0;translate:-40px -30px;rotate:-30deg}}
+.deboss{position:absolute;right:5%;bottom:14%;font:700 clamp(40px,12vw,76px)/.9 var(--fh);text-transform:uppercase;color:#3b2f22;letter-spacing:.04em;rotate:14deg;text-shadow:0 1px 0 rgba(255,255,255,.25),0 -1px 0 rgba(0,0,0,.25);opacity:.85;animation:deb 1s .6s both}
+@keyframes deb{from{opacity:0;scale:1.3}}
+.yarn{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.yarn path{fill:none;stroke:#2a3226;stroke-width:5;stroke-linecap:round;stroke-dasharray:3 2}
+.yarn .draw{stroke-dasharray:900;stroke-dashoffset:900;animation:yd 1.6s .8s ease-out forwards}
+@keyframes yd{to{stroke-dashoffset:0}}
+.tassel{position:absolute;left:30%;bottom:-6%;width:16%;aspect-ratio:1;border-radius:50% 50% 40% 40%;background:repeating-linear-gradient(90deg,#cbb48b 0 3px,#a8915f 3px 5px,#e7d8b6 5px 7px);rotate:8deg;animation:sw 4s ease-in-out infinite;transform-origin:50% 0}
+@keyframes sw{50%{rotate:-6deg}}
+.hero-tx{text-align:center;margin-top:46px}
+.hero-tx h1{font:700 clamp(36px,10.5vw,72px)/.95 var(--fh);text-transform:uppercase;color:var(--ink);margin:0 0 14px}
+.hero-tx h1 .c-or{color:var(--or)} .hero-tx h1 .c-red{color:var(--red)} .hero-tx h1 .c-gr{color:var(--gr)}
+.hero-tx .lede{margin:0 auto 22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
+@media(min-width:900px){.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:60px}.hero-tx{text-align:left;margin:0}.hero-tx .lede{margin:0 0 22px}.hero .cta-row,.hero .meta{justify-content:flex-start}}
+
+/* story pages */
+.feed{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px var(--gut) 28px;margin:0 calc(var(--gut)*-1);scrollbar-width:none}
+.feed::-webkit-scrollbar{display:none}
+.post{flex:0 0 84%;max-width:380px;scroll-snap-align:center}
+.post .pg{height:100%;padding:22px 20px 16px;display:flex;flex-direction:column}
+.post .num{font:300 46px/1 var(--f);color:var(--or);margin-bottom:8px}
+.post p{margin:0 0 9px;font-size:15.5px;color:var(--txt)}
+.post .q{color:var(--red)}
+.post .punch{font-weight:600;color:var(--gr);margin-top:auto;padding-top:8px}
+.post .pf{margin-top:14px}
+@media(min-width:900px){.feed{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;margin:0;padding:10px 0 28px}.post{max-width:none}}
+.moral{max-width:640px;margin:14px auto 0;text-align:center;font:500 clamp(20px,5.4vw,28px)/1.35 var(--f);color:var(--ink)}
+.moral b{color:var(--red)}
+
+/* contents */
+.toc{display:grid;gap:6px}
+.toc a{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.toc a:last-child{border:0}
+.toc b{display:block;font:500 17px var(--f)}
+.toc span{font-size:13px;color:var(--mute)}
+.toc .n{font:300 clamp(44px,12vw,72px)/1 var(--f);color:var(--ink);letter-spacing:-.02em}
+@media(min-width:900px){.toc{grid-template-columns:1fr 1fr;column-gap:56px}}
+
+/* brand platform scene */
+.scene{position:relative;max-width:420px;margin:0 auto}
+.scene svg{width:100%;height:auto;display:block;border-radius:3px}
+.bigw{text-align:center;margin:18px 0 6px;font:700 clamp(48px,15vw,88px)/1 var(--fh);color:var(--ink);text-transform:none}
+.bigw .art{color:var(--or);display:inline-block;min-width:2.2ch}
+.flip{display:inline-flex}
+.flip .fl{display:inline-grid;overflow:hidden;vertical-align:bottom}
+.flip .fl i{grid-area:1/1;font-style:normal;transition:translate .5s cubic-bezier(.3,1.4,.4,1),opacity .4s}
+.flip .fb{translate:0 70%;opacity:0}
+.flip.to .fa{translate:0 -70%;opacity:0}
+.flip.to .fb{translate:0 0;opacity:1}
+.meaning{text-align:center;font:500 18px var(--f);color:var(--red);min-height:1.6em;margin:0}
+.seg{display:inline-flex;gap:4px;padding:4px;border-radius:4px;background:var(--cream);margin:14px auto 0}
+.seg button{border:0;border-radius:3px;padding:10px 18px;background:transparent;font:600 15px var(--fh);letter-spacing:.05em;color:var(--red)}
+.seg button[aria-pressed="true"]{background:var(--red);color:var(--cream)}
+.rules{display:grid;gap:12px;margin-top:6px}
+.rule{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start}
+.rule .rn{font:300 40px/1 var(--f);color:var(--or)}
+.rule h4{margin:2px 0 4px;font:500 16px var(--f);color:var(--ink)}
+.rule p{margin:0;font-size:14.5px;color:#55564d}
+
+/* pair tiles */
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 14px;margin-top:8px}
+@media(min-width:700px){.tiles{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.fc{perspective:900px;cursor:pointer;border:0;background:none;padding:0;text-align:left;width:100%}
+.fi{position:relative;aspect-ratio:1;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.3,1.25,.4,1)}
+.fc.on .fi{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:2px;display:grid;place-items:center;overflow:hidden;box-shadow:0 14px 22px -16px rgba(40,25,10,.6)}
+.face.b{transform:rotateY(180deg)}
+.face::before{content:"";position:absolute;inset:7%;border:3px dashed rgba(255,255,255,.35);border-radius:2px}
+.face .ic{width:46%;height:46%;stroke-width:1.5;position:relative;z-index:1}
+.face .art{position:absolute;left:8%;top:6%;font:700 15px var(--fh);letter-spacing:.04em;z-index:1}
+.face .bit{position:absolute;width:16%;height:5%}
+.fcap{margin-top:9px;font:400 13px/1.35 var(--f);color:#55564d}
+.fcap b{display:block;font:500 15px var(--f);color:var(--ink)}
+.fcap .s2{display:none}
+.fc.on .fcap .s1{display:none}
+.fc.on .fcap .s2{display:block}
+.hint{display:flex;align-items:center;gap:8px;justify-content:center;margin:18px 0 0;font-size:13.5px;color:var(--mute)}
+
+/* tickets */
+.tks{display:grid;gap:18px;margin-top:10px}
+.tk{position:relative;display:grid;grid-template-columns:46px 1fr 34px;min-height:150px;color:#fff;border-radius:3px;filter:drop-shadow(0 16px 18px rgba(40,25,10,.28));cursor:pointer;border:0;padding:0;text-align:left;width:100%}
+.tk .stub{position:relative;border-radius:3px 0 0 3px;display:grid;place-items:center;border-right:2px dashed rgba(255,255,255,.55)}
+.tk .stub .wm{writing-mode:vertical-rl;rotate:180deg;font-size:15px;letter-spacing:.04em}
+.tk .body{position:relative;display:block;padding:14px 14px 12px;overflow:hidden}
+.tk .word,.tk .tr{display:block}
+.tk .body h4{margin:0;font:700 26px/1 var(--fh);text-transform:uppercase;letter-spacing:.02em}
+.tk .body small{display:block;font:500 10.5px var(--f);letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-top:3px}
+.tk .word{margin-top:12px;font:600 28px/1 var(--f)}
+.tk .tr{font-size:14px;opacity:.9;margin-top:4px}
+.tk .pl{margin-top:10px;display:inline-block;padding:4px 8px;background:rgba(0,0,0,.18);font:500 13px var(--f);border-radius:2px;opacity:0;translate:0 8px;transition:opacity .4s,translate .4s}
+.tk.torn .pl{opacity:1;translate:0 0}
+.tk .bar{border-radius:0 3px 3px 0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.95) 0 2px,transparent 2px 4px,rgba(255,255,255,.95) 4px 5px,transparent 5px 9px,rgba(255,255,255,.95) 9px 12px,transparent 12px 14px);background-clip:content-box;padding:12px 8px}
+.tk .orn{right:30px;top:-10px;width:120px;height:180px;opacity:.9}
+@media(min-width:900px){.tks{grid-template-columns:repeat(3,1fr)}}
+
+/* crossed variants + lanyard */
+.xs{display:grid;gap:12px;margin-top:6px}
+.xv{position:relative;padding:12px 14px;border-radius:2px;background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.xv p{margin:0;font:500 16px var(--f);color:var(--ink)}
+.xv small{display:block;margin-top:3px;font-size:13px;color:var(--mute)}
+.xv svg.x{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.xv svg.x line{stroke:var(--x);stroke-width:2.5;stroke-dasharray:600;stroke-dashoffset:0}
+.xv.ok{box-shadow:inset 0 0 0 1.5px var(--gr)}
+.xv.ok p::before{content:"✓ ";color:var(--gr)}
+.yards{display:flex;justify-content:center;gap:16px;height:250px;margin:0 auto 8px}
+.lan{position:relative;width:118px;transform-origin:50% 0;animation:sw 5s ease-in-out infinite}
+.lan:nth-child(2){animation-duration:6s;animation-delay:-2s}
+.lan .cord{position:absolute;left:50%;top:0;width:60px;height:80px;margin-left:-30px;border:3px solid var(--gr);border-top:0;border-radius:0 0 30px 30px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.lan .clip{position:absolute;left:50%;top:74px;width:14px;height:16px;margin-left:-7px;border-radius:3px;background:#9aa0a0}
+.lan .card{position:absolute;top:88px;left:0;right:0;aspect-ratio:.78;border-radius:3px;padding:10px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 18px 22px -14px rgba(40,25,10,.6);overflow:hidden}
+.lan .card .wm{font-size:12px}
+.lan .card .ic{width:44px;height:44px;stroke-width:1.5;margin:6px auto}
+.lan .card .who{font:700 17px/1 var(--fh);text-transform:uppercase;text-align:center;letter-spacing:.04em}
+.lan .card .who small{display:block;font:500 10.5px var(--f);letter-spacing:.06em;text-transform:none;margin-top:4px;opacity:.9}
+.ls{display:grid;gap:14px}
+.lscene{background:var(--cream);border-radius:3px;padding:14px}
+.lscene svg{width:100%;height:auto;max-height:220px;display:block}
+.lsent{margin:12px 0 10px;font:500 19px/1.35 var(--f);color:var(--ink);text-align:center}
+.lsent mark{background:var(--or);color:#fff;padding:0 6px;border-radius:2px}
+.opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.opts button{border:0;border-radius:3px;padding:10px 14px;background:#fff;font:500 15px var(--f);box-shadow:inset 0 0 0 1.5px var(--line)}
+.opts button[aria-pressed="true"]{background:var(--gr);color:var(--cream);box-shadow:none}
+.lexp{margin:12px 0 0;font-size:14.5px;color:#55564d;text-align:center;min-height:3em}
+@media(min-width:900px){.ls{grid-template-columns:1fr 1fr;align-items:center}}
+
+/* sock tags */
+.tags{display:grid;grid-template-columns:repeat(2,1fr);gap:46px 14px;margin-top:10px;padding-top:30px}
+@media(min-width:900px){.tags{grid-template-columns:repeat(4,1fr)}}
+.tg{position:relative;border:0;background:none;padding:0;cursor:pointer;transform-origin:50% -26px;animation:sw2 5s ease-in-out infinite;text-align:center}
+.tg:nth-child(2n){animation-delay:-1.4s;animation-duration:6s}
+.tg:nth-child(3n){animation-delay:-3s}
+@keyframes sw2{50%{rotate:3deg}0%,100%{rotate:-3deg}}
+.tg .hook{position:absolute;left:50%;top:-34px;width:30px;height:40px;margin-left:-15px}
+.tg .hook path{fill:none;stroke:var(--red);stroke-width:3.5;stroke-linecap:round}
+.tg .in{position:relative;border-radius:3px;padding:20px 10px 14px;color:#fff;min-height:168px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;box-shadow:0 16px 20px -14px rgba(40,25,10,.6)}
+.tg .in::before{content:"";position:absolute;top:9px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--table);box-shadow:inset 0 1px 2px rgba(0,0,0,.3)}
+.tg .in::after{content:"";position:absolute;inset:auto 10px 10px;height:16px;opacity:.5;background:repeating-linear-gradient(90deg,#fff 0 6px,transparent 6px 9px,#fff 9px 11px,transparent 11px 16px)}
+.tg .wm{font-size:11px;opacity:.85}
+.tg .w{font:600 20px/1.15 var(--f)}
+.tg .m{font-size:13px;opacity:.92}
+.tg .pl2{font:500 12px var(--f);letter-spacing:.06em;text-transform:uppercase;opacity:.8;margin-top:4px}
+
+/* balls */
+.balls{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 10px;margin-top:6px}
+@media(min-width:900px){.balls{grid-template-columns:repeat(3,1fr)}}
+.ball{position:relative;border:0;background:none;padding:50px 0 0;cursor:pointer;transform-origin:50% 0;animation:sw2 6s ease-in-out infinite;text-align:center}
+.ball:nth-child(2n){animation-delay:-2.5s}
+.ball .str{position:absolute;left:50%;top:0;width:2px;height:42px;background:#b9a98f}
+.ball .cap{position:absolute;left:50%;top:38px;width:22px;height:14px;margin-left:-11px;border-radius:3px 3px 2px 2px;background:#8f7a5a}
+.ball .sph{position:relative;width:min(150px,38vw);aspect-ratio:1;margin:0 auto;border-radius:50%;display:grid;place-items:center;color:#fff;overflow:hidden;box-shadow:inset -14px -16px 30px rgba(0,0,0,.25),inset 10px 10px 24px rgba(255,255,255,.18),0 16px 22px -14px rgba(40,25,10,.6)}
+.ball .sph::before{content:"";position:absolute;inset:14%;border-radius:50%;border:3px dashed rgba(255,255,255,.35)}
+.ball .sph b{color:#fff;font:600 19px/1.1 var(--f);position:relative}
+.ball .sph small{display:block;font:500 11.5px var(--f);opacity:.9;margin-top:4px}
+.ball .bcap{margin-top:10px;font-size:13px;color:#55564d;line-height:1.35}
+.ball .bcap b{font-weight:600}
+
+/* quiz */
+.qwrap{max-width:720px;margin:0 auto}
+#qz{position:relative;overflow:hidden}
+.qbar{display:flex;gap:6px;margin-bottom:14px}
+.qbar i{flex:1;height:6px;border-radius:1px;background:var(--line)}
+.qbar i.cur{background:var(--pink)}
+.qbar i.ok{background:var(--gr)}
+.qbar i.bad{background:var(--x)}
+.qn{margin:0;font:500 11px var(--f);letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+.qq{font:500 clamp(19px,5.2vw,24px)/1.4 var(--f);color:var(--ink);margin:10px 0 6px}
+.qq u{text-decoration:none;border-bottom:3px solid var(--or);color:var(--red);padding:0 4px}
+.qo{display:grid;gap:10px;margin:16px 0 14px}
+.qo button{border:0;border-radius:3px;padding:14px 16px;text-align:left;background:#fff;font:500 16px var(--f);box-shadow:inset 0 0 0 1.5px var(--line);transition:box-shadow .2s,background .2s}
+.qo button:hover:not(:disabled){box-shadow:inset 0 0 0 1.5px var(--or)}
+.qo button.ok{background:#E6EBE2;box-shadow:inset 0 0 0 2px var(--gr)}
+.qo button.bad{background:#F6E1DC;box-shadow:inset 0 0 0 2px var(--x)}
+.qx{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:#4a4b44;background:var(--cream);border-radius:3px;padding:12px 14px}
+.qx svg{width:18px;height:18px;margin-top:3px;color:var(--red)}
+.qnext{margin-top:16px}
+.qres{text-align:center;padding:10px 0}
+.qres .score{font:700 72px/1 var(--fh);color:var(--red)}
+.conf{position:absolute;left:50%;top:40%;width:10px;height:10px;pointer-events:none;z-index:5}
+
+/* palette cheat */
+.pal{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 12px;margin-top:6px}
+@media(min-width:900px){.pal{grid-template-columns:repeat(4,1fr)}}
+.sw{position:relative;aspect-ratio:1.15;padding:12px;color:#fff;border-radius:1px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 18px -14px rgba(40,25,10,.6)}
+.sw .hx{font:400 16px var(--f)}
+.sw .pr{font:500 14px/1.3 var(--f)}
+.sw .pr small{display:block;font-size:11.5px;opacity:.85;font-weight:400}
+.sw.lt{color:var(--ink)}
+
+/* AD */
+.boxes{display:grid;gap:44px;margin-top:20px;padding:10px 12px}
+.bxp{rotate:-4deg}
+.bxp:nth-child(2){rotate:3deg}
+.bxp:nth-child(3){rotate:-2deg}
+.bxp .bx{position:relative;border-radius:3px;overflow:hidden;box-shadow:0 26px 30px -20px rgba(40,25,10,.6);background:var(--gr);padding:14px 14px 12px;color:var(--cream)}
+.bxp .bx h4{margin:0 0 8px;font:700 22px/1 var(--fh);text-transform:uppercase;letter-spacing:.03em;color:var(--or)}
+.bxp .bx h4 small{display:block;font:500 11px var(--f);letter-spacing:.1em;color:var(--cream);margin-top:4px}
+.bxp .bx img,.bxp .bx video{width:100%;border-radius:2px;aspect-ratio:16/10;object-fit:cover;object-position:top left;background:#fff}
+.bxp .bx .wm{position:absolute;right:12px;bottom:10px;font-size:12px;color:var(--cream);opacity:.85}
+.bxp .bx p{margin:10px 0 18px;font-size:13.5px;color:#e4d9cb;max-width:34ch}
+@media(min-width:900px){.boxes{grid-template-columns:repeat(3,1fr);gap:34px}}
+.pains{display:grid;gap:14px;margin-top:10px}
+.pn{display:grid;gap:10px}
+.pn .xv{background:#fbf3ee}
+.pn .sol{display:flex;gap:10px;align-items:flex-start;padding:2px 4px 0;font-size:14.5px;color:#4a4b44}
+.pn .sol svg{color:var(--gr);margin-top:4px}
+.pn .sol b{color:var(--gr)}
+@media(min-width:900px){.pains{grid-template-columns:1fr 1fr;gap:22px}}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 0}
+.num{text-align:left;border-top:2px solid var(--ink);padding-top:8px}
+.num b{display:block;font:300 clamp(34px,10vw,60px)/1 var(--f);color:var(--ink);letter-spacing:-.02em}
+.num span{display:block;font-size:12px;color:var(--mute);margin-top:4px;line-height:1.35}
+.media2{display:grid;gap:22px;margin-top:10px;align-items:center}
+.phone{position:relative;width:min(270px,72vw);aspect-ratio:9/18.6;margin:0 auto;border-radius:40px;padding:9px;background:#1d201d;box-shadow:0 40px 60px -30px rgba(40,25,10,.7)}
+.phone .scr{width:100%;height:100%;border-radius:32px;overflow:hidden;background:#fff}
+.phone video{width:100%;height:100%;object-fit:cover}
+.frame{border-radius:3px;overflow:hidden;background:#fff;box-shadow:var(--sh)}
+.frame video{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
+.fcap2{font-size:13.5px;color:#55564d;margin:10px 2px 0}
+@media(min-width:900px){.media2{grid-template-columns:.8fr 1.2fr}}
+.revs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:24px var(--gut) 20px;margin:0 calc(var(--gut)*-1)}
+.revs::-webkit-scrollbar{display:none}
+.rv2{flex:0 0 78%;max-width:360px;scroll-snap-align:start;position:relative;background:#fff;padding:10px 10px 30px;box-shadow:0 18px 22px -16px rgba(40,25,10,.55);rotate:-2deg;align-self:flex-start}
+.rv2:nth-child(2n){rotate:2deg}
+.rv2 img{width:100%}
+.rv2::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:22px;margin-left:-35px;background:rgba(225,165,152,.7);rotate:-3deg}
+.tix{display:grid;gap:18px;margin-top:10px}
+.tix .tk{min-height:200px;cursor:default}
+.tix .tk .word{font:700 46px/1 var(--fh)}
+.tix .tk .word s{font-size:22px;opacity:.7;margin-left:6px;font-weight:500}
+.tix .tk ul{margin:10px 0 14px;padding:0;list-style:none;font-size:13.5px;display:grid;gap:4px}
+.tix .tk li::before{content:"— "}
+.tix .tk .btn{background:var(--cream);color:var(--ink);box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.tix .flag{position:absolute;right:42px;top:-12px;background:var(--cream);color:var(--red);font:700 12px var(--fh);letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:2px;z-index:3}
+@media(min-width:900px){.tix{grid-template-columns:repeat(3,1fr)}}
+.fine{font-size:13px;color:var(--mute);margin:20px auto 0;max-width:70ch;text-align:center}
+.final{text-align:center;padding:30px 0 10px}
+.dock{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;background:#1d201d;color:var(--cream);border-radius:4px;padding:10px 10px 10px 16px;translate:0 150%;transition:translate .45s cubic-bezier(.2,.9,.25,1.1)}
+.dock.show{translate:0 0}
+.dock p{margin:0;font-size:12px;color:#bdb4a6;line-height:1.3}
+.dock p b{display:block;color:#fff;font:700 20px var(--fh)}
+.dock .btn{padding:12px 14px;font-size:13px}
+@media(min-width:900px){.dock{left:50%;right:auto;width:520px;margin-left:-260px}}
+footer{padding:30px 0 110px;font-size:12px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+.rv{transition:opacity .7s,translate .7s}
+html.js:not(.gs) .rv:not(.in){opacity:.001;translate:0 30px}
+html.gs .rv{transition:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html.js:not(.gs) .rv{opacity:1;translate:none}.yarn .draw{stroke-dashoffset:0}}
+</style>
+
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-ladder" viewBox="0 0 24 24"><path d="M7 2v20M17 2v20M7 6h10M7 10h10M7 14h10M7 18h10"/></symbol>
+<symbol id="i-tree-pine" viewBox="0 0 24 24"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z"/><path d="M12 22v-3"/></symbol>
+<symbol id="i-ship" viewBox="0 0 24 24"><path d="M12 10.189V14"/><path d="M12 2v3"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76"/><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+<symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+<symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+<symbol id="i-goal" viewBox="0 0 24 24"><path d="M12 13V2l8 4-8 4"/><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/></symbol>
+<symbol id="i-drama" viewBox="0 0 24 24"><path d="M10 11h.01"/><path d="M14 6h.01"/><path d="M18 6h.01"/><path d="M6.5 13.1h.01"/><path d="M22 5c0 9-4 12-6 12s-6-3-6-12c0-2 2-3 6-3s6 1 6 3"/><path d="M17.4 9.9c-.8.8-2 .8-2.8 0"/><path d="M10.1 7.1C9 7.2 7.7 7.7 6 8.6c-3.5 2-4.7 3.9-3.7 5.6 4.5 7.8 9.5 8.4 11.2 7.4.9-.5 1.9-2.1 1.9-4.7"/><path d="M9.1 16.5c.3-1.1 1.4-1.7 2.4-1.4"/></symbol>
+<symbol id="i-ship-wheel" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 2v7.5"/><path d="m19 5-5.23 5.23"/><path d="M22 12h-7.5"/><path d="m19 19-5.23-5.23"/><path d="M12 14.5V22"/><path d="M10.23 13.77 5 19"/><path d="M9.5 12H2"/><path d="M10.23 10.23 5 5"/><circle cx="12" cy="12" r="2.5"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+<symbol id="i-signpost" viewBox="0 0 24 24"><path d="M12 13v8"/><path d="M12 3v3"/><path d="M18 6a2 2 0 0 1 1.387.56l2.307 2.22a1 1 0 0 1 0 1.44l-2.307 2.22A2 2 0 0 1 18 13H6a2 2 0 0 1-1.387-.56l-2.306-2.22a1 1 0 0 1 0-1.44l2.306-2.22A2 2 0 0 1 6 6z"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+<symbol id="i-skull" viewBox="0 0 24 24"><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="12" r="1"/></symbol>
+<symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+<symbol id="i-flask-conical" viewBox="0 0 24 24"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></symbol>
+<symbol id="i-chart-pie" viewBox="0 0 24 24"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></symbol>
+<symbol id="i-puzzle" viewBox="0 0 24 24"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+<symbol id="i-scroll" viewBox="0 0 24 24"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+<symbol id="i-cigarette" viewBox="0 0 24 24"><path d="M17 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14"/><path d="M18 8c0-2.5-2-2.5-2-5"/><path d="M21 16a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M22 8c0-2.5-2-2.5-2-5"/><path d="M7 12v4"/></symbol>
+<symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+<symbol id="i-cog" viewBox="0 0 24 24"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></symbol>
+<symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+<symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+<symbol id="i-ribbon" viewBox="0 0 24 24"><path d="M12 11.22C11 9.997 10 9 10 8a2 2 0 0 1 4 0c0 1-.998 2.002-2.01 3.22"/><path d="m12 18 2.57-3.5"/><path d="M6.243 9.016a7 7 0 0 1 11.507-.009"/><path d="M9.35 14.53 12 11.22"/><path d="M9.35 14.53C7.728 12.246 6 10.221 6 7a6 5 0 0 1 12 0c-.005 3.22-1.778 5.235-3.43 7.5l3.557 4.527a1 1 0 0 1-.203 1.43l-1.894 1.36a1 1 0 0 1-1.384-.215L12 18l-2.679 3.593a1 1 0 0 1-1.39.213l-1.865-1.353a1 1 0 0 1-.203-1.422z"/></symbol>
+<symbol id="i-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+<symbol id="i-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+<symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+<symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-circle-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-circle-x" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+<symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></symbol>
+<symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+<symbol id="i-message-circle" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/><path d="M5 12.859a10 10 0 0 1 5.17-2.69"/><path d="M19 12.859a10 10 0 0 0-2.007-1.523"/><path d="M2 8.82a15 15 0 0 1 4.177-2.643"/><path d="M22 8.82a15 15 0 0 0-11.288-3.764"/><path d="m2 2 20 20"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-signal" viewBox="0 0 24 24"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-battery-low" viewBox="0 0 24 24"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="11" y2="13"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="media/logo.webp" alt="" width="26" height="26"><span><span class="wm">Храни<span class="t">т</span>ели артиклей</span><small>гайд Stellas Deutsch</small></span></a>
+    <a class="btn or sm" href="#platform">Платформа · 30 €</a>
+    
+  </div>
+  <div class="prog" id="prog"></div>
+</header>
+
+<main id="top" lang="ru">
+
+<!-- HERO: kraft brand book cover -->
+<section class="hero">
+  <div class="wrap">
+    <div class="desk" aria-hidden="true">
+      <div class="emb"></div>
+      <div class="cover">
+        <div class="label"><span class="wm">Храни<span class="t">т</span>ели<br>артиклей</span><small>гайд по словам<br>с двумя артиклями</small></div>
+        <div class="deboss">der · die<br>das</div>
+        <svg class="yarn" viewBox="0 0 400 310" preserveAspectRatio="none"><path class="draw" d="M120 -10 L150 140 L210 330"/><path class="draw" d="M-10 120 L150 140 L410 90"/><path class="draw" d="M150 140 L60 330"/></svg>
+        <span class="tassel"></span>
+      </div>
+    </div>
+    <div class="hero-tx">
+      <p class="kick">Брендбук · немецкий A2–B1</p>
+      <h1>Одно слово. <span class="c-or">Два артикля.</span> <span class="c-red">Два разных смысла</span></h1>
+      <p class="lede">der See это озеро. die See это море. Поменял артикль и уехал из Австрии на океан. Разбираем таких двойников по страницам, как в брендбуке.</p>
+      <div class="cta-row">
+        <a class="btn" href="#story">Открыть брендбук <svg class="ic"><use href="#i-arrow-down"/></svg></a>
+        <a class="btn ghost" href="#platform">300+ таких гайдов</a>
+        
+      </div>
+      <div class="meta">
+        <span class="pill"><svg class="ic"><use href="#i-signal"/></svg>A2–B1</span>
+        <span class="pill"><svg class="ic"><use href="#i-clock"/></svg>7 минут</span>
+        <span class="pill"><svg class="ic"><use href="#i-layers"/></svg>15 пар</span>
+        <span class="pill"><svg class="ic"><use href="#i-volume-2"/></svg>с озвучкой</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story" style="padding-top:20px">
+  <div class="wrap">
+    <p class="kick">Предисловие</p>
+    <h2 class="h2">У меня было <span class="c-or">лето</span></h2>
+    <div class="feed" aria-label="История">
+      <article class="post"><div class="pg"><span class="num">01</span>
+        <p>У меня было лето. Австрия. Wolfgangsee.</p>
+        <p>Вода, горы, лебеди. Сижу на берегу. Кайфую.</p>
+        <p>Решаю похвастаться.</p>
+        <p class="punch">Зря решаю.</p>
+        <div class="pf"><i>Предисловие / Лето</i><i>4</i></div></div></article>
+      <article class="post"><div class="pg"><span class="num">02</span>
+        <p>Пишу немецкой одногруппнице: <b>Ich bin an der See!</b></p>
+        <p class="q">Она отвечает: в Австрии? Говорю, да. Она говорит, в Австрии нет моря.</p>
+        <p>Говорю, а это что? Фоткаю воду. Отправляю.</p>
+        <p class="punch">Вода, кстати, была очень мокрая.</p>
+        <div class="pf"><i>Предисловие / Переписка</i><i>5</i></div></div></article>
+      <article class="post"><div class="pg"><span class="num">03</span>
+        <p class="q">Она говорит, это der See. Озеро. А die See это море.</p>
+        <p>Говорю, какая разница, вода же. Она говорит, в die See плавают киты. А в твоём der See плавает пенсионер на сапе.</p>
+        <p>И пишет: правильно <b>Ich bin am See</b>.</p>
+        <p class="punch">Am. Не an der.</p>
+        <div class="pf"><i>Предисловие / Разбор</i><i>6</i></div></div></article>
+      <article class="post"><div class="pg"><span class="num">04</span>
+        <p>Смотрю на воду. По воде плывёт пенсионер на сапе.</p>
+        <p>Машет мне. Я машу в ответ.</p>
+        <p>Теперь я знаю разницу между озером и морем. По артиклю.</p>
+        <p class="punch">Кит, кстати, так и не приплыл.</p>
+        <div class="pf"><i>Предисловие / Мораль</i><i>7</i></div></div></article>
+    </div>
+    <p class="moral rv">Одно слово. Два артикля. <b>Озеро и море.</b> Сегодня разбираем таких двойников. Их больше, чем кажется.</p>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="pg spread rv">
+      <div>
+        <h2 class="sh">Содержание</h2>
+        <nav class="toc" aria-label="Содержание">
+          <a href="#platform-idea"><div><b>Бренд-платформа</b><span>1.1 Позиционирование · 1.2 Правила</span></div><span class="n">08</span></a>
+          <a href="#pairs"><div><b>Пары-двойники</b><span>2.1 Четырнадцать плиток с подвохом</span></div><span class="n">12</span></a>
+          <a href="#band"><div><b>Входные билеты</b><span>3.1 der, die, das Band</span></div><span class="n">28</span></a>
+          <a href="#leiter"><div><b>Недопустимые варианты</b><span>4.1 der Leiter, die Leiter, die Leiterin</span></div><span class="n">36</span></a>
+        </nav>
+      </div>
+      <div>
+        <nav class="toc" aria-label="Содержание, продолжение">
+          <a href="#tags"><div><b>Бирки</b><span>5.1 Множественное число выдаёт</span></div><span class="n">42</span></a>
+          <a href="#balls"><div><b>Можно и так, и так</b><span>6.1 der или das Joghurt · Австрия</span></div><span class="n">52</span></a>
+          <a href="#quiz"><div><b>Тест</b><span>7.1 Шесть вопросов</span></div><span class="n">58</span></a>
+          <a href="#cheat"><div><b>Цветовая палитра</b><span>8.1 Шпаргалка</span></div><span class="n">72</span></a>
+        </nav>
+      </div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Содержание</i><i>3</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. PLATFORM -->
+<section id="platform-idea">
+  <svg class="orn" id="orn1" viewBox="0 0 400 300" style="width:min(520px,120vw);right:-28vw;top:-10px;opacity:.9" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="pg spread rv">
+      <div>
+        <h2 class="sh"><span class="no">1.1</span> Бренд-платформа</h2>
+        <p class="sh2">Позиционирование</p>
+        <p class="tx">В немецком артикль это не украшение. Это часть слова. Как фамилия у человека.</p>
+        <p class="tx">Поменял артикль, поменял смысл. Нажми на кнопки и посмотри, как озеро становится морем.</p>
+        <div class="scene">
+          <svg id="seeSvg" viewBox="0 0 300 300" role="img" aria-label="Озеро и море">
+            <rect width="300" height="300" fill="#EFE0D5"/>
+            <g id="sun"><circle cx="150" cy="150" r="46" fill="#D8845A"/><g stroke="#D8845A" stroke-width="9"><line x1="150" y1="72" x2="150" y2="92"/><line x1="96" y1="94" x2="108" y2="108"/><line x1="204" y1="94" x2="192" y2="108"/><line x1="72" y1="140" x2="90" y2="142"/><line x1="228" y1="140" x2="210" y2="142"/></g></g>
+            <g id="lake">
+              <g fill="#3E4E3D"><path d="M40 190 L62 120 L84 190Z"/><path d="M28 205 L56 140 L84 205Z" opacity=".85"/><path d="M220 196 L244 112 L268 196Z"/><path d="M246 206 L270 146 L294 206Z" opacity=".85"/></g>
+              <rect x="0" y="196" width="300" height="104" fill="#3E4E3D"/>
+              <g stroke="#EFE0D5" stroke-width="6" stroke-linecap="butt"><line x1="40" y1="226" x2="96" y2="226"/><line x1="170" y1="244" x2="246" y2="244"/><line x1="90" y1="266" x2="140" y2="266"/></g>
+              <g id="swan" fill="#EFE0D5"><path d="M150 236 q20 0 30 -12 q-6 16 -30 16 q-16 0 -18 -6z"/><path d="M178 226 q2 -22 -8 -24 q-6 0 -4 6" fill="none" stroke="#EFE0D5" stroke-width="5"/><rect x="161" y="199" width="8" height="4" fill="#D8845A"/></g>
+              <g id="sup"><rect x="40" y="252" width="44" height="6" fill="#D8845A"/><circle cx="62" cy="230" r="5" fill="#E1A598"/><rect x="59" y="235" width="6" height="17" fill="#88483C"/><line x1="70" y1="232" x2="80" y2="258" stroke="#152217" stroke-width="2.5"/></g>
+            </g>
+            <g id="sea" opacity="0">
+              <rect x="0" y="176" width="300" height="124" fill="#88483C"/>
+              <g fill="none" stroke-width="9" stroke-linejoin="miter">
+                <path id="w1" d="M0 196 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14" stroke="#D8845A"/>
+                <path id="w2" d="M0 236 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14" stroke="#EFE0D5"/>
+                <path id="w3" d="M0 276 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14 l25 -14 l25 14" stroke="#E1A598"/>
+              </g>
+              <g id="ship"><path d="M182 172 h70 l-12 18 h-46z" fill="#152217"/><path d="M216 168 v-58 l-30 50z" fill="#EFE0D5"/><path d="M220 168 v-48 l24 40z" fill="#D8845A"/></g>
+              <g id="whale" fill="#152217"><path d="M40 214 q24 -18 50 0 q-24 10 -50 0z"/><path d="M88 210 l10 -8 v14z"/></g>
+            </g>
+            <rect x="6" y="6" width="288" height="288" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="10 6" opacity=".5"/>
+          </svg>
+          <div class="bigw"><span class="art flip" id="seeArt" data-from="der" data-to="die"></span> See</div>
+          <p class="meaning" id="seeMean">озеро. Тихо, лебеди, пенсионер на сапе</p>
+          <div style="text-align:center"><div class="seg" role="group" aria-label="Артикль"><button type="button" data-see="0" aria-pressed="true">der See</button><button type="button" data-see="1" aria-pressed="false">die See</button></div>
+          <button class="say" type="button" id="seeSay" data-say="der See" aria-label="Послушать" style="margin-left:6px;vertical-align:middle"><svg class="ic"><use href="#i-volume-2"/></svg></button></div>
+        </div>
+      </div>
+      <div>
+        <p class="sh2" style="margin-top:6px">1.2 Правила использования</p>
+        <div class="rules">
+          <div class="rule rv"><span class="rn">01</span><div><h4>Учи слово только с артиклем</h4><p>Не «See, озеро». А «der See, озеро». Без артикля ты знаешь полслова. Вторую половину знает одногруппница.</p></div></div>
+          <div class="rule rv"><span class="rn">02</span><div><h4>Привяжи картинку</h4><p>der See маленький и тихий, как Herr в лодке. die See огромная, как die Welt. Картинка держит артикль лучше таблицы.</p></div></div>
+          <div class="rule rv"><span class="rn">03</span><div><h4>Слушай множественное</h4><p>В Plural артикль у всех die. Смысл выдают окончания: die Kiefer это челюсти, die Kiefern это сосны.</p></div></div>
+          <div class="rule rv"><span class="rn">04</span><div><h4>Контекст спасает</h4><p>«Ich steige auf die Leiter». На начальника не залезают. Обычно.</p></div></div>
+        </div>
+      </div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Бренд-платформа / Позиционирование</i><i>8–9</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PAIRS -->
+<section id="pairs">
+  <div class="wrap">
+    <div class="pg rv">
+      <h2 class="sh"><span class="no">2.1</span> Пары-двойники</h2>
+      <p class="tx">Четырнадцать плиток, как орнаменты в брендбуке. Спереди одно значение. Нажми, и плитка перевернётся. Тот же набор букв, другой артикль, другой мир.</p>
+      <div class="tiles" id="tiles"></div>
+      <p class="hint"><svg class="ic"><use href="#i-hand"/></svg>Нажми на плитку. Она перевернётся и скажет слово вслух</p>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Стилеобразующие элементы / Пары</i><i>12–27</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. BAND tickets -->
+<section id="band">
+  <svg class="orn" id="orn2" viewBox="0 0 400 300" style="width:min(460px,110vw);left:-30vw;top:20px;opacity:.85" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="pg spread rv">
+      <div>
+        <h2 class="sh"><span class="no">3.1</span> Входные билеты</h2>
+        <p class="sh2">Band. Три артикля, три билета</p>
+        <p class="tx">Самый жадный двойник. У него сразу три артикля. И у каждого своё множественное число, как своя категория билета.</p>
+        <p class="tx">Нажми на билет. Корешок оторвётся и покажет Plural.</p>
+        <div class="rules" style="margin-top:14px">
+          <div class="rule"><span class="rn">die</span><div><h4>die Band пришла из английского</h4><p>Музыкальная группа. Женский род, как die Gruppe. Так проще запомнить.</p></div></div>
+          <div class="rule"><span class="rn">der</span><div><h4>der Band стоит на полке</h4><p>Том книги. Der erste Band von Harry Potter.</p></div></div>
+          <div class="rule"><span class="rn">das</span><div><h4>das Band всё остальное</h4><p>Лента, резинка, связь. das Fließband это конвейер. Работа как у Чаплина.</p></div></div>
+        </div>
+      </div>
+      <div class="tks" id="tks">
+        <button class="tk" type="button" style="background:#D8845A" data-say="die Band. Die Band spielt heute Abend." aria-label="Билет: die Band">
+          <span class="stub"><span class="wm">Храни<span class="t">т</span>ели</span></span>
+          <span class="body"><h4>Концерт</h4><small>этнической музыки</small><span class="word">die Band</span><span class="tr">группа, музыканты</span><span class="pl">Pl. die Bands</span></span>
+          <span class="bar"></span>
+        </button>
+        <button class="tk" type="button" style="background:#717054" data-say="der Band. Ich lese den zweiten Band." aria-label="Билет: der Band">
+          <span class="stub"><span class="wm">Храни<span class="t">т</span>ели</span></span>
+          <span class="body"><h4>Библиотека</h4><small>читальный зал</small><span class="word">der Band</span><span class="tr">том, книга серии</span><span class="pl">Pl. die Bände</span></span>
+          <span class="bar"></span>
+        </button>
+        <button class="tk" type="button" style="background:#88483C" data-say="das Band. Das Band ist rot." aria-label="Билет: das Band">
+          <span class="stub"><span class="wm">Храни<span class="t">т</span>ели</span></span>
+          <span class="body"><h4>Мастерская</h4><small>ленты и резинки</small><span class="word">das Band</span><span class="tr">лента, связь</span><span class="pl">Pl. die Bänder</span></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Деловая документация / Входные билеты</i><i>28–29</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. LEITER -->
+<section id="leiter">
+  <div class="wrap">
+    <div class="pg spread rv">
+      <div>
+        <h2 class="sh"><span class="no">4.1</span> Недопустимые варианты</h2>
+        <p class="tx">der Leiter это начальник. die Leiter это лестница. А начальница это die Leiterin. Три слова, которые любят путать. Особенно в письме начальнице.</p>
+        <div class="yards" aria-hidden="true">
+          <div class="lan"><span class="cord"></span><span class="clip"></span><div class="card" style="background:#3E4E3D"><span class="wm">Храни<span class="t">т</span>ели</span><svg class="ic"><use href="#i-briefcase"/></svg><span class="who">der Leiter<small>начальник</small></span></div></div>
+          <div class="lan"><span class="cord"></span><span class="clip"></span><div class="card" style="background:#88483C"><span class="wm">Храни<span class="t">т</span>ели</span><svg class="ic"><use href="#i-ladder"/></svg><span class="who">die Leiter<small>лестница</small></span></div></div>
+        </div>
+        <p class="sh2">Недопустимо</p>
+        <div class="xs" id="xs">
+          <div class="xv"><p>Meine Leiter hat mir frei gegeben.</p><small>«Моя лестница дала мне выходной». Лестницы так не умеют.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div>
+          <div class="xv"><p>Der Leiter ist aus Holz.</p><small>«Начальник сделан из дерева». Бывает, но не так.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div>
+          <div class="xv ok"><p>Meine Leiterin hat mir frei gegeben.</p><small>Моя начальница дала мне выходной. Вот теперь всё правильно.</small></div>
+        </div>
+      </div>
+      <div class="ls">
+        <div class="lscene">
+          <svg id="lSvg" viewBox="0 0 300 200" role="img" aria-label="Иллюстрация к предложению">
+            <rect x="0" y="182" width="300" height="18" fill="#C4A27A"/>
+            <g id="lBoss"><circle cx="150" cy="58" r="20" fill="#E1A598"/><rect x="124" y="82" width="52" height="72" fill="#3E4E3D"/><path d="M150 84 l7 12 l-7 34 l-7 -34z" fill="#88483C"/><rect x="128" y="154" width="16" height="28" fill="#152217"/><rect x="156" y="154" width="16" height="28" fill="#152217"/><rect x="178" y="110" width="30" height="22" fill="#D8845A"/></g>
+            <g id="lLadder" opacity="0"><g fill="#D8845A"><rect x="118" y="20" width="10" height="162"/><rect x="172" y="20" width="10" height="162"/></g><g fill="#88483C"><rect x="128" y="40" width="44" height="8"/><rect x="128" y="74" width="44" height="8"/><rect x="128" y="108" width="44" height="8"/><rect x="128" y="142" width="44" height="8"/></g><g id="lMe"><circle cx="70" cy="96" r="13" fill="#E1A598"/><rect x="58" y="110" width="24" height="44" fill="#717054"/><rect x="60" y="154" width="8" height="28" fill="#152217"/><rect x="72" y="154" width="8" height="28" fill="#152217"/><text x="92" y="86" style="font:700 22px var(--fh);fill:#C9473B">?!</text></g></g>
+            <g id="lBossin" opacity="0"><path d="M128 60 q22 -46 44 0 v30 h-44z" fill="#88483C"/><circle cx="150" cy="62" r="19" fill="#E1A598"/><path d="M150 84 l34 98 h-68z" fill="#D8845A"/><rect x="138" y="84" width="24" height="20" fill="#D8845A"/><rect x="186" y="112" width="26" height="20" fill="#3E4E3D"/></g>
+          </svg>
+          <p class="lsent" id="lSent">Ich spreche mit <mark>dem Leiter</mark>.</p>
+          <div class="opts" role="group" aria-label="Варианты">
+            <button type="button" data-l="0" aria-pressed="true">dem Leiter</button>
+            <button type="button" data-l="1" aria-pressed="false">der Leiter</button>
+            <button type="button" data-l="2" aria-pressed="false">der Leiterin</button>
+          </div>
+          <p class="lexp" id="lExp">mit + Dativ. der Leiter → dem Leiter. Ты говоришь с начальником. Нормальный рабочий день.</p>
+        </div>
+      </div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Логотип / Недопустимые варианты</i><i>36–37</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TAGS -->
+<section id="tags">
+  <div class="wrap">
+    <div class="pg rv">
+      <h2 class="sh"><span class="no">5.1</span> Бирки</h2>
+      <p class="tx">В множественном числе у всех артикль die. Подсказка пропадает. Зато окончания разные, как бирки на носках разного размера. Нажми на бирку, увидишь Plural.</p>
+      <div class="tags" id="tagsBox"></div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Фирменная продукция / Бирки</i><i>42–51</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. BALLS -->
+<section id="balls">
+  <svg class="orn" id="orn3" viewBox="0 0 400 300" style="width:min(460px,110vw);right:-30vw;top:0;opacity:.85" aria-hidden="true"></svg>
+  <div class="wrap">
+    <div class="pg spread rv">
+      <div>
+        <h2 class="sh"><span class="no">6.1</span> Можно и так, и так</h2>
+        <p class="tx">А тут смысл не меняется. Просто в разных местах говорят по-разному. В Австрии и на юге Германии свои привычки. Я живу в Австрии и говорю das Cola. Немцы морщатся. Я тоже морщусь, когда они говорят die.</p>
+        <p class="tx">Нажми на шар. Он покрутится и покажет второй вариант.</p>
+      </div>
+      <div class="balls" id="ballsBox"></div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Сувенирная продукция / Шары</i><i>52–53</i></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. QUIZ -->
+<section id="quiz">
+  <div class="wrap">
+    <div class="qwrap">
+      <p class="kick">7.1 Тест</p>
+      <h2 class="h2">Шесть вопросов. <span class="c-red">Без подсказок</span></h2>
+      <div class="pg"><div id="qz" aria-live="polite"></div><div class="pf"><i>Гайд «Хранители артиклей» / Тест</i><i>58</i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. PALETTE -->
+<section id="cheat">
+  <div class="wrap">
+    <div class="pg rv">
+      <h2 class="sh"><span class="no">8.1</span> Цветовая палитра</h2>
+      <p class="tx">Восемь цветов брендбука. На каждом пара, которую стоит держать в голове. Сохрани скриншот.</p>
+      <div class="pal" id="pal"></div>
+      <p style="margin:18px 0 0;font:500 16px var(--f);color:var(--ink);text-align:center">Слово без артикля как бирка без размера. <b style="color:var(--red)">Купишь не то.</b></p>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Стилеобразующие элементы / Цветовая палитра</i><i>72</i></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="platform">
+  <svg class="orn" id="orn4" viewBox="0 0 400 300" style="width:min(520px,120vw);left:-30vw;top:-20px;opacity:.9" aria-hidden="true"></svg>
+  <div class="wrap">
+    <p class="kick">9.1 Фирменная продукция · Stellas A0–C1</p>
+    <h2 class="h2">Этот брендбук на 15 пар. <span class="c-or">На платформе 300+ гайдов</span></h2>
+    <p class="lede">Грамматика, слова, жизнь в немецкоязычной стране. Каждый гайд с объяснением, видео, упражнением и разбором ответов.</p>
+    <div class="nums">
+      <div class="num"><b class="count" data-to="300">300+</b><span>гайдов от A0 до C1</span></div>
+      <div class="num"><b class="count" data-to="2500">2500+</b><span>слов с озвучкой и транскрипцией</span></div>
+      <div class="num"><b class="count" data-to="100">100+</b><span>студентов прошли наши разговорные клубы</span></div>
+    </div>
+
+    <div class="boxes">
+      <div class="bxp rv crop"><div class="bx"><h4>Der Die Das<small>игра на артикли от Stellas</small></h4><img src="media/g-40.webp" alt="Игра Der Die Das от Stellas: слова по темам с цветом рода" loading="lazy"><p>Каждое слово сразу с цветом рода. Синий der, розовый die, зелёный das. Глаз запоминает раньше головы.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
+      <div class="bxp rv crop"><div class="bx" style="background:#88483C"><h4>Слова по темам<small>сразу с артиклем и озвучкой</small></h4><img src="media/p4-words.webp" alt="Карточки слов: die Wohnung, die Miete, der Mietvertrag" loading="lazy"><p>die Wohnung, die Miete, der Mietvertrag. Слово без артикля здесь не встретишь.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
+      <div class="bxp rv crop"><div class="bx" style="background:#717054"><h4>Всё в Notion<small>грамматика, слова, трекер</small></h4><img src="media/p1-home.webp" alt="Главная страница платформы Stellas в Notion" loading="lazy"><p>Одно место вместо десяти вкладок. Работает офлайн на телефоне.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
+    </div>
+
+    <div class="pg spread rv" style="margin-top:40px">
+      <div>
+        <h2 class="sh"><span class="no">9.2</span> Недопустимые варианты</h2>
+        <p class="tx">То, как не надо учить немецкий. Мы все так делали. Я тоже.</p>
+      </div>
+      <div class="pains">
+        <div class="pn"><div class="xv"><p>Гадать артикль. Шанс 33%.</p><small>Как рулетка, только проигрываешь каждый день.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Игра Der Die Das</b> и гайды по родам. Артикль запоминается вместе со словом и цветом.</span></p></div>
+        <div class="pn"><div class="xv"><p>Писать письмо на работу и 10 минут гуглить der или das.</p><small>Письмо уходит через час. И всё равно с ошибкой.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Тренажёр писем Brief auf Deutsch</b> и раздел «Работа» с готовыми фразами для реальных ситуаций.</span></p></div>
+        <div class="pn"><div class="xv"><p>Молчать на встрече, потому что считаешь род.</p><small>Коллеги думают, что ты стеснительный. Ты просто занят: der, die, das.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Gemini-чат в роли собеседника.</b> Пишешь на немецком, ошибаешься сколько угодно, никто не смотрит.</span></p></div>
+        <div class="pn"><div class="xv"><p>Учить слова списком без артиклей.</p><small>Потом переучивать. Это дольше, чем учить сразу.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>2500+ слов с озвучкой и транскрипцией</b>, разложенных по темам. Плюс система повторения прямо в Notion.</span></p></div>
+      </div>
+      <div class="pf"><i>Stellas / Недопустимые варианты</i><i>90–91</i></div>
+    </div>
+
+    <div class="media2" style="margin-top:44px">
+      <div>
+        <div class="phone"><div class="scr"><video class="vid" muted loop playsinline preload="none" data-poster="media/app-mobile.jpg"><source src="media/app-mobile.mp4" type="video/mp4"></video></div></div>
+        <p class="fcap2" style="text-align:center"><b>Der Die Das с телефона.</b> Пять минут в очереди. Десять слов с артиклем.</p>
+      </div>
+      <div style="display:grid;gap:20px">
+        <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-vocab.jpg"><source src="media/gemini-vocab.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Словарь в Gemini.</b> Каждое слово с артиклем, озвучкой и примером.</p></div>
+        <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-chat.jpg"><source src="media/gemini-chat.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Чат с нейросетью в роли.</b> Коллега, врач или сосед. Говоришь, ошибаешься, учишься.</p></div>
+      </div>
+    </div>
+
+    <p class="kick" style="margin-top:50px">9.3 Отзывы · без фотошопа</p>
+    <h2 class="h2">Что пишут <span class="c-red">студенты</span></h2>
+    <div class="revs">
+      <figure class="rv2" style="margin:0"><img src="media/r7-cert.webp" alt="Студентка показывает сертификат Deutsch-Test für Zuwanderer" loading="lazy"></figure>
+      <figure class="rv2" style="margin:0"><img src="media/r5.webp" alt="Отзыв студента о платформе" loading="lazy"></figure>
+      <figure class="rv2" style="margin:0"><img src="media/r1.webp" alt="Отзыв студента о платформе" loading="lazy"></figure>
+      <figure class="rv2" style="margin:0"><img src="media/r3.webp" alt="Отзыв студента о платформе" loading="lazy"></figure>
+      <figure class="rv2" style="margin:0"><img src="media/r2.webp" alt="Отзыв студента о платформе" loading="lazy"></figure>
+    </div>
+
+    <p class="kick" style="margin-top:40px" id="price">9.4 Входные билеты · один раз и навсегда</p>
+    <h2 class="h2">Билет дешевле, <span class="c-or">чем концерт</span></h2>
+    <p class="lede">Никакой подписки. Платишь один раз. Все обновления бесплатно.</p>
+    <div class="tix">
+      <div class="tk" style="background:#717054">
+        <span class="stub"><span class="wm">Stellas</span></span>
+        <span class="body"><h4>A0–A2</h4><small>для тех, кто с нуля</small><span class="word">20 €</span><ul><li>Дорожная карта: 28 недель до A2</li><li>Ситуации: врач, банк, транспорт</li><li>Игра Der Die Das</li></ul><a class="btn sm" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Взять билет</a></span>
+        <span class="bar"></span>
+      </div>
+      <div class="tk" style="background:#88483C">
+        <span class="stub"><span class="wm">Stellas</span></span>
+        <span class="body"><h4>B1–C1</h4><small>для тех, кто уже в теме</small><span class="word">20 €</span><ul><li>Gemini-приложения под темы экзаменов</li><li>Goethe, telc, ÖSD, TestDaF, DTZ</li><li>Сложная грамматика</li></ul><a class="btn sm" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Взять билет</a></span>
+        <span class="bar"></span>
+      </div>
+      <div class="tk" style="background:#D8845A">
+        <span class="flag">Выгоднее</span>
+        <span class="stub"><span class="wm">Stellas</span></span>
+        <span class="body"><h4>A0–C1</h4><small>весь путь, обе платформы</small><span class="word">30 € <s>40 €</s></span><ul><li>300+ гайдов, 2500+ слов</li><li>Экзамены, фильмы, книги, трекер</li><li>В подарок A0–A2 на украинском</li></ul><a class="btn sm" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Забрать всё за 30 €</a></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+    <p class="fine">Платформа сделана в Notion: скачиваешь приложение на телефон или ноутбук и заходишь даже без интернета. Цену планируем поднять после новых обновлений. Кто уже купил, получает их бесплатно. Вопросы пиши в Telegram: <a href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">@stellasdeutsch</a></p>
+
+    <div class="final">
+      <h2 class="h2">Двойников ты уже различаешь. <span class="c-red">Осталось 299 тем</span></h2>
+      <p class="lede" style="margin:0 auto 20px">Это просто язык. Учи слово с артиклем, и оно перестанет притворяться другим.</p>
+      <div class="cta-row"><a class="btn or big" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Хочу на платформу <svg class="ic"><use href="#i-arrow-right"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap"><span>Stellas Deutsch · немецкий без воды</span><span>Гайд: Wörter mit zwei Artikeln · 2026</span></div></footer>
+
+
+<div class="dock" id="dock" aria-hidden="true">
+  <p><b>30 €</b>A0–C1 · навсегда</p>
+  <a class="btn or" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener" tabindex="-1">Забрать <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+</div>
+
+
+<script>
+function artikelInit(){
+  document.documentElement.classList.add('js');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var G = window.gsap && window.ScrollTrigger ? window.gsap : null;
+  var AD = !!document.getElementById('platform');
+  if(G){ try{ G.registerPlugin(ScrollTrigger); window.SplitText && G.registerPlugin(SplitText); }catch(e){ G = null; } }
+  if(G){ document.documentElement.classList.add('gs'); ScrollTrigger.config({ignoreMobileResize:true}); }
+  var ST = G && window.SplitText, ANIM = G && !reduce;
+  function $(s,r){ return (r||document).querySelector(s); }
+  function $$(s,r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); }
+  function whenVisible(el, on, off, th){
+    if(!el) return;
+    if(!('IntersectionObserver' in window)){ on(); return; }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ en.isIntersecting ? on() : (off && off()); }); }, {threshold:th||.25}).observe(el);
+  }
+  var C = {or:'#D8845A', red:'#88483C', gr:'#3E4E3D', pink:'#E1A598', ink:'#152217', ol:'#717054', terra:'#CA7663', cream:'#EFE0D5'};
+
+  /* ---------- speech ---------- */
+  var tts = 'speechSynthesis' in window;
+  if(!tts) document.documentElement.classList.add('no-tts');
+  var deVoice = null;
+  function pickVoice(){ try{ var v = speechSynthesis.getVoices(); deVoice = v.find(function(x){ return /^de/i.test(x.lang); }) || null; }catch(e){} }
+  if(tts){ pickVoice(); try{ speechSynthesis.onvoiceschanged = pickVoice; }catch(e){} }
+  function say(text, btn){
+    if(!tts || !text) return;
+    try{
+      speechSynthesis.cancel();
+      var u = new SpeechSynthesisUtterance(text);
+      u.lang = 'de-DE'; u.rate = .9; if(deVoice) u.voice = deVoice;
+      if(btn){ btn.classList.add('on'); u.onend = u.onerror = function(){ btn.classList.remove('on'); }; }
+      speechSynthesis.speak(u);
+    }catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-say]');
+    if(!b || b.closest('#tiles,#tks,#tagsBox,#ballsBox')) return;
+    say(b.dataset.say, b.classList.contains('say') ? b : null);
+  });
+
+  /* ---------- flip letters ---------- */
+  function buildFlip(el){
+    var a = el.dataset.from, b = el.dataset.to, n = Math.max(a.length, b.length), h = '';
+    for(var i = 0; i < n; i++){ var x = a[i] || '', y = b[i] || ''; h += x === y ? '<span>' + x + '</span>' : '<span class="fl"><i class="fa">' + x + '</i><i class="fb">' + y + '</i></span>'; }
+    el.innerHTML = h;
+  }
+  $$('.flip[data-from]').forEach(buildFlip);
+
+  /* ---------- ornament strokes (brand-platform pieces) ---------- */
+  var SH = ['M0 0 v44 h34', 'M0 0 v34 h44 v-34', 'M0 0 l14 14 l14 -14 l14 14 l14 -14', 'M0 0 h56', 'M0 18 q10 -22 20 0 t20 0 t20 0', 'M0 0 h30 v30', 'M0 0 v26 h14 v-26 h14 v26'];
+  function rnd(seed){ var s = seed; return function(){ s = (s * 9301 + 49297) % 233280; return s / 233280; }; }
+  function ornament(svg, seed, n){
+    if(!svg) return;
+    var r = rnd(seed), cols = [C.or, C.red, C.gr, C.pink, C.ol, C.terra, C.ink], h = '';
+    for(var i = 0; i < n; i++){
+      var x = 20 + r() * 340, y = 20 + r() * 240, rot = Math.round(r() * 4) * 90 + (r() - .5) * 20, s = .7 + r() * .7;
+      h += '<g transform="translate(' + x.toFixed(0) + ' ' + y.toFixed(0) + ') rotate(' + rot.toFixed(0) + ') scale(' + s.toFixed(2) + ')"><path class="op" d="' + SH[Math.floor(r() * SH.length)] + '" stroke="' + cols[Math.floor(r() * cols.length)] + '"/></g>';
+    }
+    svg.innerHTML = h;
+  }
+  ornament($('#orn1'), 7, 16); ornament($('#orn2'), 21, 12); ornament($('#orn3'), 42, 12); ornament($('#orn4'), 99, 16);
+
+  /* ---------- reveal ---------- */
+  if(ANIM){
+    $$('.h2').forEach(function(h){
+      var t = h;
+      if(ST){ try{ t = new SplitText(h, {type:'words', wordsClass:'wd'}).words; }catch(e){} }
+      G.from(t, {yPercent:70, rotation:5, transformOrigin:'0% 100%', duration:.8, ease:'back.out(2)', stagger:.05, scrollTrigger:{trigger:h, start:'top 88%', once:true}});
+    });
+    G.set('.rv', {y:46});
+    ScrollTrigger.batch('.rv', {start:'top 94%', once:true, onEnter:function(b){ G.to(b, {y:0, duration:.9, ease:'power3.out', stagger:.08}); }});
+    $$('.orn').forEach(function(svg){
+      var ps = $$('g', svg);
+      G.from(ps, {scale:.2, rotation:function(){ return G.utils.random(-120, 120); }, transformOrigin:'50% 50%', duration:1, ease:'back.out(2)', stagger:.04, scrollTrigger:{trigger:svg.parentNode, start:'top 85%', once:true}});
+      G.to(svg, {y:-90, rotation:6, ease:'none', scrollTrigger:{trigger:svg.parentNode, start:'top bottom', end:'bottom top', scrub:true}});
+    });
+    G.to('#prog', {scaleX:1, ease:'none', scrollTrigger:{trigger:'main', start:'top top', end:'bottom bottom', scrub:.3}});
+    ScrollTrigger.batch('.toc .n', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {yPercent:80, duration:.8, ease:'back.out(2)', stagger:.08}); }});
+    ScrollTrigger.batch('.rule .rn', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {scale:.3, rotation:-40, duration:.8, ease:'elastic.out(1,.5)', stagger:.1}); }});
+    ScrollTrigger.batch('.bxp', {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:80, rotation:function(){ return G.utils.random(-14, 14); }, duration:1, ease:'back.out(1.6)', stagger:.12}); }});
+    ScrollTrigger.batch('.rv2', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {y:-60, rotation:function(){ return G.utils.random(-12, 12); }, duration:.9, ease:'bounce.out', stagger:.1}); }});
+    ScrollTrigger.batch('.sw', {start:'top 94%', once:true, onEnter:function(b){ G.from(b, {y:50, rotation:function(){ return G.utils.random(-20, 20); }, scale:.7, duration:.8, ease:'back.out(2)', stagger:.07}); }});
+    ScrollTrigger.batch('.tix .tk', {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {x:function(i){ return i % 2 ? 80 : -80; }, rotation:function(){ return G.utils.random(-10, 10); }, duration:.9, ease:'back.out(1.6)', stagger:.12}); }});
+    $$('svg.x line').forEach(function(l){ G.fromTo(l, {strokeDashoffset:600}, {strokeDashoffset:0, duration:.7, ease:'power2.in', scrollTrigger:{trigger:l.closest('.xv'), start:'top 85%', once:true}}); });
+  } else if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); }, {rootMargin:'0px 0px 8% 0px', threshold:.12});
+    $$('.rv').forEach(function(el){ io.observe(el); });
+  } else { $$('.rv').forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ---------- 1.1 der See / die See scene ---------- */
+  (function(){
+    function wave(y){ var d = 'M-50 ' + y; for(var i = 0; i < 18; i++) d += ' l25 ' + (i % 2 ? 14 : -14); return d; }
+    $('#w1').setAttribute('d', wave(196)); $('#w2').setAttribute('d', wave(236)); $('#w3').setAttribute('d', wave(276));
+    var art = $('#seeArt'), mean = $('#seeMean'), sayB = $('#seeSay'), cur = 0, auto = null, touched = false, loops = [];
+    var M = ['озеро. Тихо, лебеди, пенсионер на сапе', 'море. Волны, корабли и киты'];
+    function set(i, anim){
+      cur = i; art.classList.toggle('to', i === 1); mean.textContent = M[i];
+      sayB.dataset.say = i ? 'die See. Wir fahren an die See.' : 'der See. Wir schwimmen im See.';
+      $$('[data-see]').forEach(function(b){ b.setAttribute('aria-pressed', +b.dataset.see === i); });
+      if(G){
+        var d = anim && ANIM ? 1 : 0;
+        G.to('#lake', {opacity:i ? 0 : 1, y:i ? 30 : 0, duration:d * .7});
+        G.to('#sea', {opacity:i ? 1 : 0, duration:d * .5});
+        if(i && d){
+          G.fromTo(['#w1', '#w2', '#w3'], {y:70}, {y:0, duration:.9, ease:'back.out(1.6)', stagger:.12});
+          G.fromTo('#ship', {x:120, rotation:8, svgOrigin:'216 170'}, {x:0, rotation:0, duration:1.2, ease:'power3.out', delay:.3});
+          G.fromTo('#whale', {y:40}, {y:0, duration:.8, ease:'back.out(2)', delay:.7});
+          G.fromTo('#sun', {y:0}, {y:20, duration:.8});
+        } else if(d){
+          G.fromTo('#swan', {x:-60}, {x:0, duration:1.2, ease:'power3.out'});
+          G.fromTo('#sup', {x:-80}, {x:0, duration:1.4, ease:'power2.out', delay:.2});
+          G.to('#sun', {y:0, duration:.8});
+        }
+        if(d) G.fromTo('.bigw', {scale:.9}, {scale:1, duration:.6, ease:'elastic.out(1,.4)'});
+      } else { $('#lake').setAttribute('opacity', i ? 0 : 1); $('#sea').setAttribute('opacity', i ? 1 : 0); }
+    }
+    if(ANIM){
+      loops = [G.to('#w1', {x:-50, duration:2.4, ease:'none', repeat:-1, paused:true}), G.to('#w2', {x:50, duration:3, ease:'none', repeat:-1, paused:true}), G.to('#w3', {x:-50, duration:2, ease:'none', repeat:-1, paused:true}), G.to('#ship', {y:-4, rotation:3, svgOrigin:'216 170', duration:1.4, ease:'sine.inOut', yoyo:true, repeat:-1, paused:true})];
+    }
+    $$('[data-see]').forEach(function(b){ b.onclick = function(){ touched = true; clearInterval(auto); set(+b.dataset.see, true); say(sayB.dataset.say); }; });
+    set(0, false);
+    if(reduce) return;
+    whenVisible($('#seeSvg'), function(){ loops.forEach(function(l){ l.play(); }); if(touched || auto) return; auto = setInterval(function(){ if(touched){ clearInterval(auto); return; } set(cur ? 0 : 1, true); }, 3400); }, function(){ loops.forEach(function(l){ l.pause(); }); clearInterval(auto); auto = null; });
+  })();
+
+  /* ---------- 2.1 tiles ---------- */
+  var T = [
+    ['der','See','озеро','tree-pine',C.gr,'die','море','ship',C.red,'der See маленький, как Herr в лодке. die See огромная, как die Welt.','der See. Wir schwimmen im See.','die See. Wir fahren an die See.'],
+    ['der','Leiter','начальник','briefcase',C.ol,'die','лестница','ladder',C.or,'der Leiter руководит. На die Leiter залезают. Иногда это одна карьера.','der Leiter. Der Leiter hat heute frei.','die Leiter. Ich steige auf die Leiter.'],
+    ['das','Tor','ворота, гол','goal',C.gr,'der','глупец (устар.)','drama',C.terra,'das Tor: ворота и гол. der Tor: глупец, который бьёт в свои ворота.','das Tor. Das Tor ist offen.','der Tor. Er ist ein Tor.'],
+    ['das','Steuer','руль','ship-wheel',C.ink,'die','налог','coins',C.or,'das Steuer держишь руками. die Steuer у тебя забирают.','das Steuer. Sie sitzt am Steuer.','die Steuer. Ich zahle die Steuer.'],
+    ['das','Schild','табличка, вывеска','signpost',C.red,'der','щит','shield',C.ol,'das Schild висит на двери. der Schild держит рыцарь.','das Schild. Das Schild hängt an der Tür.','der Schild. Der Ritter hat einen Schild.'],
+    ['der','Kiefer','челюсть','skull',C.terra,'die','сосна','tree-pine',C.gr,'der Kiefer жуёт. die Kiefer растёт в лесу. Не перепутай у стоматолога.','der Kiefer. Mein Kiefer tut weh.','die Kiefer. Die Kiefer ist hoch.'],
+    ['das','Gehalt','зарплата','banknote',C.gr,'der','содержание (алкоголя, сахара)','flask-conical',C.red,'das Gehalt приходит раз в месяц. der Gehalt написан на бутылке.','das Gehalt. Das Gehalt kommt am Ersten.','der Gehalt. Der Alkoholgehalt ist hoch.'],
+    ['der','Teil','часть целого','chart-pie',C.or,'das','деталь, штука','puzzle',C.ol,'der Teil это часть. das Teil это деталь. Или «что это за штука?»','der Teil. Der größte Teil ist fertig.','das Teil. Was ist das für ein Teil?'],
+    ['der','Erbe','наследник','user',C.red,'das','наследство','scroll',C.or,'der Erbe это человек. das Erbe это то, что ему досталось.','der Erbe. Er ist der einzige Erbe.','das Erbe. Das Erbe ist groß.'],
+    ['der','Laster','грузовик (разг.)','truck',C.ol,'das','порок','cigarette',C.ink,'der Laster везёт груз. das Laster это сериалы до трёх ночи.','der Laster. Der Laster ist voll.','das Laster. Rauchen ist ein Laster.'],
+    ['der','Moment','миг, момент','timer',C.terra,'das','фактор','cog',C.gr,'der Moment это миг. das Moment это фактор. Звучат одинаково, весят по-разному.','der Moment. Einen Moment, bitte.','das Moment. Das ist das entscheidende Moment.'],
+    ['der','Golf','залив','waves',C.gr,'das','гольф','flag',C.or,'der Golf это залив. das Golf играют на газоне богатые пенсионеры.','der Golf. Der Golf von Neapel.','das Golf. Das Golf ist teuer.'],
+    ['der','Bund','союз; пояс брюк','landmark',C.red,'das','пучок, связка','leaf',C.ol,'der Bund это союз и пояс брюк. das Bund это пучок петрушки.','der Bund. Der Bund und die Länder.','das Bund. Ein Bund Petersilie, bitte.'],
+    ['der','Mangel','нехватка','battery-low',C.ink,'die','каток для белья','shirt',C.terra,'der Mangel это нехватка. die Mangel это каток для белья. И «in die Mangel nehmen»: прижать к стенке.','der Mangel. Es gibt einen Mangel an Zeit.','die Mangel. Er nimmt ihn in die Mangel.']
+  ];
+  (function(){
+    var box = $('#tiles'), r = rnd(5);
+    function bits(col){ var h = ''; for(var k = 0; k < 3; k++){ var pos = ['left:' + (8 + r() * 60).toFixed(0) + '%;bottom:8%', 'right:8%;top:' + (20 + r() * 50).toFixed(0) + '%', 'left:8%;top:' + (40 + r() * 30).toFixed(0) + '%'][k]; h += '<i class="bit" style="' + pos + ';background:' + col + '"></i>'; } return h; }
+    box.innerHTML = T.map(function(t, i){
+      return '<button class="fc" type="button" data-i="' + i + '" aria-label="' + t[0] + ' ' + t[1] + ' или ' + t[5] + ' ' + t[1] + '">' +
+        '<div class="fi"><div class="face a" style="background:' + t[4] + ';color:' + C.cream + '"><span class="art">' + t[0] + '</span><svg class="ic"><use href="#i-' + t[3] + '"/></svg>' + bits(C.cream + '88') + '</div>' +
+        '<div class="face b" style="background:' + t[8] + ';color:' + C.cream + '"><span class="art">' + t[5] + '</span><svg class="ic"><use href="#i-' + t[7] + '"/></svg>' + bits(C.ink + '55') + '</div></div>' +
+        '<div class="fcap"><span class="s1"><b class="de">' + t[0] + ' ' + t[1] + '</b>' + t[2] + '</span><span class="s2"><b class="de">' + t[5] + ' ' + t[1] + '</b>' + t[6] + '. ' + t[9] + '</span></div></button>';
+    }).join('');
+    var tiles = $$('.fc', box), demoed = false, touched = false;
+    tiles.forEach(function(b){ b.onclick = function(){ touched = true; b.classList.toggle('on'); var t = T[+b.dataset.i]; say(b.classList.contains('on') ? t[11] : t[10]); }; });
+    if(ANIM) ScrollTrigger.batch(tiles, {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:60, rotation:function(){ return G.utils.random(-12, 12); }, scale:.8, duration:.8, ease:'back.out(1.8)', stagger:.07}); }});
+    if(!reduce) whenVisible(box, function(){
+      if(demoed || touched) return; demoed = true;
+      tiles.slice(0, 6).forEach(function(t, i){ setTimeout(function(){ if(!touched) t.classList.add('on'); }, 600 + i * 180); setTimeout(function(){ if(!touched) t.classList.remove('on'); }, 2600 + i * 180); });
+    }, null, .3);
+  })();
+
+  /* ---------- 3.1 tickets ---------- */
+  (function(){
+    var tks = $$('#tks .tk'), demoed = false, touched = false;
+    function tear(tk, on){
+      tk.classList.toggle('torn', on);
+      if(ANIM){ var s = $('.stub', tk); G.to(s, on ? {x:-14, y:18, rotation:-16, duration:.6, ease:'back.out(2)'} : {x:0, y:0, rotation:0, duration:.5, ease:'power2.out'}); }
+    }
+    tks.forEach(function(tk){ tk.onclick = function(){ touched = true; var on = !tk.classList.contains('torn'); tear(tk, on); if(on) say(tk.dataset.say); }; });
+    if(ANIM) G.from(tks, {y:80, rotation:function(i){ return [-8, 6, -4][i]; }, duration:1, ease:'back.out(1.6)', stagger:.15, scrollTrigger:{trigger:'#tks', start:'top 85%', once:true}});
+    if(reduce){ tks.forEach(function(t){ t.classList.add('torn'); }); return; }
+    whenVisible($('#tks'), function(){ if(demoed || touched) return; demoed = true; tks.forEach(function(t, i){ setTimeout(function(){ if(!touched) tear(t, true); }, 900 + i * 700); }); }, null, .4);
+  })();
+
+  /* ---------- 4.1 Leiter scene ---------- */
+  (function(){
+    var S = [
+      ['dem Leiter', 0, '<b>mit + Dativ.</b> der Leiter → dem Leiter. Ты говоришь с начальником. Нормальный рабочий день.', 'Ich spreche mit dem Leiter.'],
+      ['der Leiter', 1, '<b>mit + Dativ.</b> die Leiter → der Leiter. Ты говоришь с лестницей. Коллеги переглядываются. dem и der: одна буква, целая профессия.', 'Ich spreche mit der Leiter.'],
+      ['der Leiterin', 2, '<b>mit + Dativ.</b> die Leiterin → der Leiterin. Ты говоришь с начальницей. Тоже нормальный рабочий день.', 'Ich spreche mit der Leiterin.']
+    ], g = ['#lBoss', '#lLadder', '#lBossin'], cur = 0, auto = null, touched = false;
+    function set(i, anim){
+      cur = i; var s = S[i];
+      $('#lSent').innerHTML = 'Ich spreche mit <mark>' + s[0] + '</mark>.'; $('#lExp').innerHTML = s[2];
+      $$('[data-l]').forEach(function(b){ b.setAttribute('aria-pressed', +b.dataset.l === i); });
+      g.forEach(function(sel, k){
+        if(G){ G.to(sel, {opacity:k === i ? 1 : 0, duration:anim && ANIM ? .4 : 0}); if(k === i && anim && ANIM) G.fromTo(sel, {y:30, scale:.85, svgOrigin:'150 182'}, {y:0, scale:1, duration:.7, ease:'back.out(2.4)'}); }
+        else $(sel).setAttribute('opacity', k === i ? 1 : 0);
+      });
+      if(i === 1 && anim && ANIM) G.fromTo('#lMe', {x:-20, rotation:-8, svgOrigin:'70 182'}, {x:0, rotation:0, duration:.8, ease:'elastic.out(1.2,.35)', delay:.3});
+      if(anim && ANIM) G.fromTo('#lSent mark', {scale:.6, rotation:-6}, {scale:1, rotation:0, duration:.6, ease:'back.out(3)'});
+    }
+    $$('[data-l]').forEach(function(b){ b.onclick = function(){ touched = true; clearInterval(auto); set(+b.dataset.l, true); say(S[+b.dataset.l][3]); }; });
+    set(0, false);
+    if(reduce) return;
+    whenVisible($('#lSvg'), function(){ if(touched || auto) return; auto = setInterval(function(){ if(touched){ clearInterval(auto); return; } set((cur + 1) % 3, true); }, 3200); }, function(){ clearInterval(auto); auto = null; });
+  })();
+
+  /* ---------- 5.1 sock tags ---------- */
+  (function(){
+    var P = [['der Kiefer','челюсть','die Kiefer'],['die Kiefer','сосна','die Kiefern'],['das Steuer','руль','die Steuer'],['die Steuer','налог','die Steuern'],['das Gehalt','зарплата','die Gehälter'],['der Gehalt','содержание','die Gehalte'],['das Schild','табличка','die Schilder'],['der Schild','щит','die Schilde'],['der Leiter','начальник','die Leiter'],['die Leiter','лестница','die Leitern'],['der Band','том','die Bände'],['das Band','лента','die Bänder']];
+    var cols = [C.red, C.gr, C.or, C.ol, C.terra, C.ink], box = $('#tagsBox');
+    box.innerHTML = P.map(function(p, i){
+      return '<button class="tg" type="button" data-i="' + i + '" aria-label="' + p[0] + ', множественное ' + p[2] + '"><svg class="hook" viewBox="0 0 30 40" aria-hidden="true"><path d="M15 40 V22 a8 8 0 1 0 -8 -8"/></svg><span class="in" style="background:' + cols[Math.floor(i / 2) % cols.length] + '"><span class="wm">Храни<span class="t">т</span>ели</span><span class="w de">' + p[0] + '</span><span class="m">' + p[1] + '</span><span class="pl2">нажми · Plural</span></span></button>';
+    }).join('');
+    $$('.tg', box).forEach(function(t){
+      var p = P[+t.dataset.i], on = false;
+      t.onclick = function(){
+        on = !on; var inn = $('.in', t);
+        function swap(){ $('.w', t).textContent = on ? p[2] : p[0]; $('.pl2', t).textContent = on ? 'Plural' : 'нажми · Plural'; }
+        if(ANIM){ G.to(inn, {rotationY:90, duration:.18, ease:'power2.in', onComplete:function(){ swap(); G.fromTo(inn, {rotationY:-90}, {rotationY:0, duration:.45, ease:'back.out(2)'}); }}); } else swap();
+        say(on ? p[2] : p[0]);
+      };
+    });
+    if(ANIM) ScrollTrigger.batch($$('.tg', box), {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:-120, duration:1, ease:'bounce.out', stagger:.08}); }});
+  })();
+
+  /* ---------- 6.1 balls ---------- */
+  (function(){
+    var B = [['der Joghurt','das Joghurt','В Германии чаще der. В Австрии das'],['die Cola','das Cola','die на севере. das на юге Германии и в Австрии'],['die E-Mail','das E-Mail','das часто в Австрии и Швейцарии'],['der Keks','das Keks','В Австрии das Keks'],['der Liter','das Liter','Оба правильные. Чаще der'],['das Virus','der Virus','Правильно das. В разговоре часто der']];
+    var cols = [C.red, C.gr, C.or, C.terra, C.ol, C.ink], box = $('#ballsBox');
+    box.innerHTML = B.map(function(b, i){ return '<button class="ball" type="button" data-i="' + i + '" aria-label="' + b[0] + ' или ' + b[1] + '"><span class="str"></span><span class="cap"></span><span class="sph" style="background:' + cols[i] + '"><b class="de">' + b[0] + '<small>нажми</small></b></span><span class="bcap">' + b[2] + '</span></button>'; }).join('');
+    $$('.ball', box).forEach(function(el){
+      var b = B[+el.dataset.i], on = false;
+      el.onclick = function(){
+        on = !on; var sph = $('.sph', el);
+        function swap(){ $('.sph b', el).innerHTML = (on ? b[1] : b[0]) + '<small>' + (on ? 'тоже можно' : 'нажми') + '</small>'; }
+        if(ANIM){ G.to(sph, {rotationY:90, duration:.2, ease:'power2.in', onComplete:function(){ swap(); G.fromTo(sph, {rotationY:-90}, {rotationY:0, duration:.6, ease:'back.out(2)'}); }}); } else swap();
+        say(on ? b[1] : b[0]);
+      };
+    });
+    if(ANIM) ScrollTrigger.batch($$('.ball', box), {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:-140, duration:1.1, ease:'bounce.out', stagger:.1}); }});
+  })();
+
+  /* ---------- 8.1 palette ---------- */
+  (function(){
+    var P = [['#d8845a','der See · die See','озеро · море',0],['#88483c','der Leiter · die Leiter','начальник · лестница',0],['#3e4e3d','das Steuer · die Steuer','руль · налог',0],['#efe0d5','das Gehalt · der Gehalt','зарплата · содержание',1],['#e1a598','der Kiefer · die Kiefer','челюсть · сосна',1],['#152217','die · der · das Band','группа · том · лента',0],['#717054','das Schild · der Schild','табличка · щит',0],['#ca7663','der Teil · das Teil','часть · деталь',0]];
+    var r = rnd(13);
+    $('#pal').innerHTML = P.map(function(p){ return '<div class="sw' + (p[3] ? ' lt' : '') + '" style="background:' + p[0] + ';rotate:' + ((r() - .5) * 5).toFixed(1) + 'deg"><span class="hx">' + p[0] + '</span><span class="pr de">' + p[1] + '<small>' + p[2] + '</small></span></div>'; }).join('');
+  })();
+
+  /* ---------- quiz ---------- */
+  var Q = [
+    {q:'Wir fahren im Sommer an die See.', ask:'Куда едем летом?', o:['на море','на озеро','к начальнику'], c:0, x:'die See это море. an die See: на море. На озеро было бы an den See.'},
+    {q:'Der Mechaniker steigt auf die Leiter.', ask:'Что делает механик?', o:['залезает на лестницу','идёт к начальнику','платит налог'], c:0, x:'auf die Leiter: на лестницу. На начальника не залезают. Обычно.'},
+    {q:'Ich lese gerade ___ zweiten Band von Harry Potter.', o:['den','das','die'], c:0, x:'Том книги это der Band. В Akkusativ: den zweiten Band.'},
+    {q:'Meine ___ hat mir heute frei gegeben.', o:['Leiter','Leiterin','Leitern'], c:1, x:'meine + начальница = die Leiterin. die Leiter это лестница. Лестницы выходных не дают.'},
+    {q:'Das Gehalt kommt am Ersten.', ask:'Что приходит первого числа?', o:['зарплата','содержание алкоголя','наследство'], c:0, x:'das Gehalt это зарплата. der Gehalt это содержание. Первого приходит зарплата. К сожалению, только раз в месяц.'},
+    {q:'Im Wald stehen hohe ___.', o:['Kiefer','Kiefern','Kiefers'], c:1, x:'Сосна это die Kiefer, в Plural die Kiefern. Kiefer без -n это челюсти. Высокие челюсти в лесу это уже фильм ужасов.'}
+  ];
+  var qz = $('#qz'), qi = 0, res = [];
+  function bar(){ return '<div class="qbar">' + Q.map(function(_, i){ return '<i class="' + (res[i] === true ? 'ok' : res[i] === false ? 'bad' : i === qi ? 'cur' : '') + '"></i>'; }).join('') + '</div>'; }
+  function drawQ(){
+    var it = Q[qi];
+    var body = it.ask ? '<p class="qq de">' + it.q + ' <button class="say" type="button" data-say="' + it.q + '" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button></p><p style="margin:0;font-size:15px;color:#55564d">' + it.ask + '</p>' : '<p class="qq de">' + it.q.replace('___', '<u id="blank">___</u>') + '</p>';
+    qz.innerHTML = bar() + '<p class="qn">Вопрос ' + (qi + 1) + ' из ' + Q.length + '</p>' + body + '<div class="qo">' + it.o.map(function(o, i){ return '<button type="button" data-i="' + i + '"' + (it.ask ? '' : ' class="de"') + '>' + o + '</button>'; }).join('') + '</div><div class="qx" id="qx"><svg class="ic"><use href="#i-brain"/></svg><span>Выбери вариант. Палитра со шпаргалкой ниже, но не подглядывай.</span></div>';
+    $$('.qo button', qz).forEach(function(b){ b.onclick = function(){ answer(+b.dataset.i); }; });
+    if(ANIM) G.from($$('.qo button', qz), {y:20, rotation:function(){ return G.utils.random(-3, 3); }, duration:.5, ease:'back.out(2)', stagger:.06});
+  }
+  function burst(n){
+    if(!ANIM) return;
+    var cols = [C.or, C.red, C.gr, C.pink, C.ol, C.terra];
+    for(var i = 0; i < n; i++){
+      var c = document.createElement('i'); c.className = 'conf'; c.style.background = cols[i % cols.length]; c.style.width = (6 + (i % 3) * 6) + 'px'; qz.appendChild(c);
+      G.fromTo(c, {x:0, y:0, rotation:0}, {x:G.utils.random(-240, 240), y:G.utils.random(-200, 160), rotation:G.utils.random(-360, 360), opacity:0, duration:G.utils.random(1, 1.8), ease:'power3.out', onComplete:(function(el){ return function(){ el.remove(); }; })(c)});
+    }
+  }
+  function answer(i){
+    var it = Q[qi], ok = i === it.c; res[qi] = ok;
+    $$('.qo button', qz).forEach(function(b){ b.disabled = true; var k = +b.dataset.i; if(k === it.c) b.classList.add('ok'); else if(k === i) b.classList.add('bad'); });
+    var chosen = $$('.qo button', qz)[i];
+    if(ANIM){ ok ? G.fromTo(chosen, {scale:.9}, {scale:1, duration:.6, ease:'elastic.out(1,.4)'}) : G.fromTo(chosen, {x:-8}, {x:0, duration:.5, ease:'elastic.out(1.2,.2)'}); }
+    var bl = $('#blank'); if(bl) bl.textContent = it.o[it.c];
+    var qx = $('#qx');
+    qx.innerHTML = '<svg class="ic"><use href="#i-' + (ok ? 'circle-check' : 'circle-x') + '"/></svg><span>' + (ok ? '<b>Верно.</b> ' : '<b>Мимо.</b> ') + it.x + '</span>';
+    if(ok) burst(14);
+    say(it.q.replace('___', it.o[it.c]));
+    $('.qbar', qz).outerHTML = bar();
+    var nb = document.createElement('button'); nb.className = 'btn qnext'; nb.type = 'button';
+    nb.innerHTML = qi < Q.length - 1 ? 'Дальше <svg class="ic"><use href="#i-arrow-right"/></svg>' : 'Результат <svg class="ic"><use href="#i-trophy"/></svg>';
+    nb.onclick = function(){ qi++; qi < Q.length ? drawQ() : done(); };
+    qz.appendChild(nb); nb.focus({preventScroll:true});
+  }
+  function done(){
+    var s = res.filter(Boolean).length;
+    var msg = s === 6 ? 'Шесть из шести. Можешь писать свой брендбук.' : s >= 4 ? 'Почти. Перелистай бирки с Plural. Там все и путаются.' : 'Нормально. Двойники для того и двойники. Пролистай палитру и попробуй ещё раз.';
+    var link = AD ? '<a class="btn ghost" href="#platform">Ещё 300+ тем</a>' : '<a class="btn ghost" href="#cheat">Палитра-шпаргалка</a>';
+    qz.innerHTML = bar() + '<div class="qres"><div class="score">' + s + '/6</div><p class="qq" style="margin-top:8px">' + msg + '</p><div class="cta-row" style="margin-top:16px"><button type="button" class="btn" id="again"><svg class="ic"><use href="#i-repeat"/></svg> Ещё раз</button>' + link + '</div></div>';
+    $('#again').onclick = function(){ qi = 0; res = []; drawQ(); };
+    if(ANIM){ G.from('.qres .score', {scale:.3, rotation:-20, duration:1, ease:'elastic.out(1,.4)'}); burst(s * 8); }
+  }
+  drawQ();
+
+  /* ---------- ad: counters, videos, dock ---------- */
+  $$('.count').forEach(function(c){
+    var to = +c.dataset.to, o = {v:0};
+    if(!ANIM){ c.textContent = to + '+'; return; }
+    ScrollTrigger.create({trigger:c, start:'top 92%', once:true, onEnter:function(){ G.to(o, {v:to, duration:1.6, ease:'power2.out', onUpdate:function(){ c.textContent = Math.round(o.v) + '+'; }}); }});
+  });
+  var pio = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ var v = en.target; if(v.dataset.poster) v.poster = v.dataset.poster; pio.unobserve(v); } }); }, {rootMargin:'900px 0px'}) : null;
+  $$('video.vid').forEach(function(v){
+    pio ? pio.observe(v) : (v.poster = v.dataset.poster);
+    whenVisible(v, function(){ try{ v.preload = 'auto'; var p = v.play(); p && p.catch(function(){}); }catch(e){} }, function(){ try{ v.pause(); }catch(e){} });
+  });
+  var dock = $('#dock'), priceSec = $('.tix');
+  if(dock && priceSec && 'IntersectionObserver' in window){
+    var pastHero = false, atPrice = false;
+    function upd(){ var s = pastHero && !atPrice; dock.classList.toggle('show', s); dock.setAttribute('aria-hidden', !s); $('a', dock).tabIndex = s ? 0 : -1; }
+    new IntersectionObserver(function(es){ es.forEach(function(en){ pastHero = !en.isIntersecting && en.boundingClientRect.top < 0; upd(); }); }).observe($('.hero'));
+    new IntersectionObserver(function(es){ es.forEach(function(en){ atPrice = en.isIntersecting; upd(); }); }).observe(priceSec);
+  }
+  if(G){ window.addEventListener('load', function(){ ScrollTrigger.refresh(); }); if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ ScrollTrigger.refresh(); }); }
+}
+if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', artikelInit); else artikelInit();
+</script>
+
+</body>
+</html>
