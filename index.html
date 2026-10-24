@@ -338,6 +338,13 @@ section{position:relative;padding:56px 0}
 .frame video{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top}
 .fcap2{font-size:13.5px;color:#55564d;margin:10px 2px 0}
 @media(min-width:900px){.media2{grid-template-columns:.8fr 1.2fr}}
+@media(min-width:900px){.media2.duo{grid-template-columns:1fr 1fr;align-items:start}}
+.nshots{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:14px var(--gut) 22px;margin:0 calc(var(--gut)*-1)}
+.nshots::-webkit-scrollbar{display:none}
+.nsh{flex:0 0 86%;max-width:540px;scroll-snap-align:center;margin:0;background:#fff;padding:8px 8px 14px;box-shadow:0 18px 22px -16px rgba(40,25,10,.55);rotate:-1.2deg}
+.nsh:nth-child(2n){rotate:1.2deg}
+.nsh img{display:block;width:100%;height:auto}
+.nsh .fcap2{margin:8px 6px 0}
 .revs{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:24px var(--gut) 20px;margin:0 calc(var(--gut)*-1)}
 .revs::-webkit-scrollbar{display:none}
 .rv2{flex:0 0 78%;max-width:360px;scroll-snap-align:start;position:relative;background:#fff;padding:10px 10px 30px;box-shadow:0 18px 22px -16px rgba(40,25,10,.55);rotate:-2deg;align-self:flex-start}
@@ -804,8 +811,8 @@ html.gs .rv{transition:none}
     </div>
 
     <div class="boxes">
-      <div class="bxp rv crop"><div class="bx"><h4>Der Die Das<small>игра на артикли от Stellas</small></h4><img src="media/g-40.webp" alt="Игра Der Die Das от Stellas: слова по темам с цветом рода" loading="lazy"><p>Каждое слово сразу с цветом рода. Синий der, розовый die, зелёный das. Глаз запоминает раньше головы.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
-      <div class="bxp rv crop"><div class="bx" style="background:#88483C"><h4>Слова по темам<small>сразу с артиклем и озвучкой</small></h4><img src="media/p4-words.webp" alt="Карточки слов: die Wohnung, die Miete, der Mietvertrag" loading="lazy"><p>die Wohnung, die Miete, der Mietvertrag. Слово без артикля здесь не встретишь.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
+      <div class="bxp rv crop"><div class="bx"><h4>Повторение слов<small>интервальная система в Notion</small></h4><img src="media/n-a0-srs.webp" alt="Система интервальных повторений в Notion: карточки слов по уровням от A1 до C1" loading="lazy"><p>die Umwelt, das Haus, die Meinung. Слово возвращается вместе с артиклем, пока не запомнишь.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
+      <div class="bxp rv crop"><div class="bx" style="background:#88483C"><h4>Слова по темам<small>своя страница на каждую тему</small></h4><img src="media/n-a0-lexik-topics.webp" alt="Лексика по темам в Notion: тело, деньги, профессия, кухня, спальня" loading="lazy"><p>Тело, деньги, кухня, спальня. Учишь слова кучкой по теме, а не списком на 500 строк.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
       <div class="bxp rv crop"><div class="bx" style="background:#717054"><h4>Всё в Notion<small>грамматика, слова, трекер</small></h4><img src="media/p1-home.webp" alt="Главная страница платформы Stellas в Notion" loading="lazy"><p>Одно место вместо десяти вкладок. Работает офлайн на телефоне.</p><span class="wm">Храни<span class="t">т</span>ели</span></div></div>
     </div>
 
@@ -815,7 +822,7 @@ html.gs .rv{transition:none}
         <p class="tx">То, как не надо учить немецкий. Мы все так делали. Я тоже.</p>
       </div>
       <div class="pains">
-        <div class="pn"><div class="xv"><p>Гадать артикль. Шанс 33%.</p><small>Как рулетка, только проигрываешь каждый день.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Игра Der Die Das</b> и гайды по родам. Артикль запоминается вместе со словом и цветом.</span></p></div>
+        <div class="pn"><div class="xv"><p>Гадать артикль. Шанс 33%.</p><small>Как рулетка, только проигрываешь каждый день.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Система повторения в Notion</b> и гайды по родам. Артикль запоминается вместе со словом.</span></p></div>
         <div class="pn"><div class="xv"><p>Писать письмо на работу и 10 минут гуглить der или das.</p><small>Письмо уходит через час. И всё равно с ошибкой.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Тренажёр писем Brief auf Deutsch</b> и раздел «Работа» с готовыми фразами для реальных ситуаций.</span></p></div>
         <div class="pn"><div class="xv"><p>Молчать на встрече, потому что считаешь род.</p><small>Коллеги думают, что ты стеснительный. Ты просто занят: der, die, das.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>Gemini-чат в роли собеседника.</b> Пишешь на немецком, ошибаешься сколько угодно, никто не смотрит.</span></p></div>
         <div class="pn"><div class="xv"><p>Учить слова списком без артиклей.</p><small>Потом переучивать. Это дольше, чем учить сразу.</small><svg class="x" preserveAspectRatio="none" viewBox="0 0 100 100"><line x1="2" y1="92" x2="98" y2="8" vector-effect="non-scaling-stroke"/></svg></div><p class="sol"><svg class="ic"><use href="#i-check"/></svg><span><b>2500+ слов с озвучкой и транскрипцией</b>, разложенных по темам. Плюс система повторения прямо в Notion.</span></p></div>
@@ -823,15 +830,23 @@ html.gs .rv{transition:none}
       <div class="pf"><i>Stellas / Недопустимые варианты</i><i>90–91</i></div>
     </div>
 
-    <div class="media2" style="margin-top:44px">
-      <div>
-        <div class="phone"><div class="scr"><video class="vid" muted loop playsinline preload="none" data-poster="media/app-mobile.jpg"><source src="media/app-mobile.mp4" type="video/mp4"></video></div></div>
-        <p class="fcap2" style="text-align:center"><b>Der Die Das с телефона.</b> Пять минут в очереди. Десять слов с артиклем.</p>
-      </div>
-      <div style="display:grid;gap:20px">
-        <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-vocab.jpg"><source src="media/gemini-vocab.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Словарь в Gemini.</b> Каждое слово с артиклем, озвучкой и примером.</p></div>
-        <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-chat.jpg"><source src="media/gemini-chat.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Чат с нейросетью в роли.</b> Коллега, врач или сосед. Говоришь, ошибаешься, учишься.</p></div>
-      </div>
+    <div style="margin-top:50px">
+      <p class="kick">Платформа изнутри · Notion</p>
+      <h2 class="h2">Вот как это выглядит <span class="c-or">в Notion</span></h2>
+      <p class="lede">Настоящие страницы платформы, без монтажа. Листай вбок.</p>
+    </div>
+    <div class="nshots" aria-label="Скриншоты платформы в Notion">
+      <figure class="nsh"><img src="media/n-a0-intro-audio.webp" alt="Страница «Знакомство на немецком»: аудио и таблица с переводом и транскрипцией" loading="lazy"><figcaption class="fcap2"><b>Слова с аудио.</b> Слушаешь диалог. Рядом немецкий, перевод и транскрипция кириллицей.</figcaption></figure>
+      <figure class="nsh"><img src="media/n-a0-newlex.webp" alt="Раздел «Новая лексика»: у терапевта, в больнице, в аптеке, звонок в скорую" loading="lazy"><figcaption class="fcap2"><b>Новая лексика.</b> Ситуации из жизни: терапевт, аптека, звонок в скорую.</figcaption></figure>
+      <figure class="nsh"><img src="media/n-a0-grammar.webp" alt="Раздел «Грамматика»: навигация, план, основы" loading="lazy"><figcaption class="fcap2"><b>Грамматика.</b> План и темы по порядку. Начинаешь с алфавита и правил чтения.</figcaption></figure>
+      <figure class="nsh"><img src="media/n-a0-progress.webp" alt="Таблица «Прогресс по темам» с галочками и уровнями A0–A2" loading="lazy"><figcaption class="fcap2"><b>Прогресс по темам.</b> Прошёл тему, поставил галочку. Рядом уровень: A0, A1, A2.</figcaption></figure>
+      <figure class="nsh"><img src="media/n-a0-habits.webp" alt="Трекеры привычек: чтение, слушание, разговорная практика, письмо" loading="lazy"><figcaption class="fcap2"><b>Трекеры привычек.</b> Чтение, слушание, разговор, письмо. Каждый день одна клеточка.</figcaption></figure>
+      <figure class="nsh"><img src="media/n-a0-exams.webp" alt="Раздел «Экзамены»: Goethe-Zertifikat A1–C1, как готовиться, типичные ошибки" loading="lazy"><figcaption class="fcap2"><b>Экзамены.</b> Goethe-Zertifikat от A1 до C1. Как готовиться и типичные ошибки.</figcaption></figure>
+    </div>
+
+    <div class="media2 duo" style="margin-top:34px">
+      <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-vocab.jpg"><source src="media/gemini-vocab.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Словарь в Gemini.</b> Каждое слово с артиклем, озвучкой и примером.</p></div>
+      <div><div class="frame"><video class="vid" muted loop playsinline preload="none" data-poster="media/gemini-chat.jpg"><source src="media/gemini-chat.mp4" type="video/mp4"></video></div><p class="fcap2"><b>Чат с нейросетью в роли.</b> Коллега, врач или сосед. Говоришь, ошибаешься, учишься.</p></div>
     </div>
 
     <p class="kick" style="margin-top:50px">9.3 Отзывы · без фотошопа</p>
@@ -850,7 +865,7 @@ html.gs .rv{transition:none}
     <div class="tix">
       <div class="tk" style="background:#717054">
         <span class="stub"><span class="wm">Stellas</span></span>
-        <span class="body"><h4>A0–A2</h4><small>для тех, кто с нуля</small><span class="word">20 €</span><ul><li>Дорожная карта: 28 недель до A2</li><li>Ситуации: врач, банк, транспорт</li><li>Игра Der Die Das</li></ul><a class="btn sm" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Взять билет</a></span>
+        <span class="body"><h4>A0–A2</h4><small>для тех, кто с нуля</small><span class="word">20 €</span><ul><li>Дорожная карта: 28 недель до A2</li><li>Ситуации: врач, банк, транспорт</li><li>Повторение слов по системе</li></ul><a class="btn sm" href="https://app.lava.top/801303618?tabId=products&sort=published" target="_blank" rel="noopener">Взять билет</a></span>
         <span class="bar"></span>
       </div>
       <div class="tk" style="background:#88483C">
