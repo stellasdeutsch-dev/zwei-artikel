@@ -113,7 +113,7 @@ section{position:relative;padding:56px 0}
 .cover::before{content:"";position:absolute;inset:0;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .25 0 0 0 0 .12 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 @keyframes cov{from{opacity:0;translate:0 60px;rotate:-9deg}}
 .label{position:absolute;left:7%;top:7%;width:58%;padding:14px 16px 13px;background:#1d201d;color:#f2ece4;rotate:-11deg;box-shadow:0 16px 24px -14px rgba(0,0,0,.7);animation:lab 1s .35s cubic-bezier(.2,.9,.25,1.3) both}
-.label::after{content:"";position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
+.label::after{content:"";position:absolute;inset:0;opacity:.07;background:repeating-linear-gradient(0deg,#fff 0 1px,transparent 1px 3px)}
 .label .wm{display:block;font-size:clamp(25px,7.4vw,44px)}
 .label small{display:block;margin-top:6px;font:500 clamp(9px,2.4vw,12px)/1.25 var(--f);letter-spacing:.06em;text-transform:uppercase;color:#cfc6b8}
 @keyframes lab{from{opacity:0;translate:-40px -30px;rotate:-30deg}}
@@ -364,6 +364,39 @@ section{position:relative;padding:56px 0}
 footer{padding:30px 0 110px;font-size:12px;color:var(--mute)}
 footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 
+/* --- visuals v2 --- */
+.horn{position:absolute;left:-12%;top:-14%;width:124%;height:128%;pointer-events:none;overflow:visible}
+.horn path{fill:none;stroke-width:12;transform-box:fill-box;transform-origin:center;animation:pc .9s cubic-bezier(.2,1.5,.4,1) both;animation-delay:calc(var(--d) * 1s)}
+@keyframes pc{from{scale:0;rotate:-90deg;opacity:0}}
+.ill{width:100%;height:auto;display:block;margin:2px 0 14px;border-radius:2px}
+.oband{position:relative;overflow:hidden;height:64px;margin:34px calc(var(--gut)*-1) 6px;rotate:-2deg;background:var(--page);box-shadow:var(--sh)}
+section > .oband{margin:0;rotate:2deg}
+.otrk{display:flex;width:max-content;height:100%}
+.otrk svg{flex:none;width:1200px;height:64px}
+.otrk path{fill:none;stroke-width:10}
+.face .pat{position:absolute;inset:0;width:100%;height:100%}
+.pat path{fill:none;stroke-width:7;stroke-dasharray:1;stroke-dashoffset:0}
+.face .med{position:relative;z-index:1;width:54%;aspect-ratio:1;border-radius:50%;background:var(--cream);display:grid;place-items:center;box-shadow:0 0 0 5px rgba(255,255,255,.18)}
+.face .med .ic{width:58%;height:58%;stroke-width:1.9}
+.shf{max-width:560px;margin:0 auto}
+.shf svg#shSvg{width:100%;height:auto;max-height:42vh;display:block;margin:0 auto;border-radius:2px}
+.shcap{text-align:center;margin-top:10px}
+.shword{margin:0;font:700 clamp(38px,11vw,64px)/1 var(--fh)!important;color:var(--ink)}
+.shart{color:var(--or);display:inline-block}
+.shru{margin:6px auto 0;font-size:15px;color:#55564d;min-height:3em;max-width:36ch}
+.shf .ctrl{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:8px}
+.shdots{display:flex;gap:6px}
+.shdots button{width:30px;height:30px;border:0;border-radius:2px;background:var(--cream);font:700 12px var(--fh);color:var(--red);transition:background .2s,color .2s}
+.shdots button[aria-pressed="true"]{background:var(--red);color:var(--cream)}
+.ball .sph .pat{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+#ballsBox{position:relative}
+.garl{position:absolute;left:-4%;width:108%;top:-6px;height:44px;pointer-events:none;overflow:visible}
+.garl path{fill:none;stroke:#3E4E3D;stroke-width:2.5}
+.garl circle{animation:blink 1.6s ease-in-out infinite;animation-delay:calc(var(--d) * 1s)}
+@keyframes blink{50%{opacity:.25}}
+.stamp{position:absolute;right:16px;top:58px;z-index:4;font:700 22px/1 var(--fh);letter-spacing:.12em;color:var(--gr);border:3px solid currentColor;border-radius:3px;padding:6px 10px;rotate:-12deg;pointer-events:none;background:rgba(253,251,248,.8)}
+.stamp.bad{color:var(--x)}
+
 .rv{transition:opacity .7s,translate .7s}
 html.js:not(.gs) .rv:not(.in){opacity:.001;translate:0 30px}
 html.gs .rv{transition:none}
@@ -442,6 +475,7 @@ html.gs .rv{transition:none}
 <section class="hero">
   <div class="wrap">
     <div class="desk" aria-hidden="true">
+      <svg class="horn" id="horn" viewBox="0 0 400 320"></svg>
       <div class="emb"></div>
       <div class="cover">
         <div class="label"><span class="wm">Храни<span class="t">т</span>ели<br>артиклей</span><small>гайд по словам<br>с двумя артиклями</small></div>
@@ -475,31 +509,32 @@ html.gs .rv{transition:none}
     <p class="kick">Предисловие</p>
     <h2 class="h2">У меня было <span class="c-or">лето</span></h2>
     <div class="feed" aria-label="История">
-      <article class="post"><div class="pg"><span class="num">01</span>
+      <article class="post"><div class="pg"><span class="num">01</span><svg class="ill" id="ill1" viewBox="0 0 300 120" aria-hidden="true"><rect width="300" height="120" fill="#EFE0D5"/><circle cx="215" cy="52" r="20" fill="#D8845A"/><path d="M0 84 L46 30 L84 72 L120 22 L170 80 L210 46 L250 78 L300 40 V120 H0Z" fill="#717054"/><path d="M0 92 L40 60 L76 88 L118 50 L160 90 L206 64 L250 92 L300 70 V120 H0Z" fill="#3E4E3D"/><rect y="92" width="300" height="28" fill="#3E4E3D"/><g stroke="#EFE0D5" stroke-width="3"><line x1="30" y1="102" x2="70" y2="102"/><line x1="200" y1="110" x2="250" y2="110"/></g><g class="swan"><path d="M120 106 q14 0 20 -8 q-4 11 -20 11 q-10 0 -12 -4z" fill="#fff"/><path d="M139 99 q2 -14 -5 -15 q-4 0 -3 4" fill="none" stroke="#fff" stroke-width="3"/></g></svg>
         <p>У меня было лето. Австрия. Wolfgangsee.</p>
         <p>Вода, горы, лебеди. Сижу на берегу. Кайфую.</p>
         <p>Решаю похвастаться.</p>
         <p class="punch">Зря решаю.</p>
         <div class="pf"><i>Предисловие / Лето</i><i>4</i></div></div></article>
-      <article class="post"><div class="pg"><span class="num">02</span>
+      <article class="post"><div class="pg"><span class="num">02</span><svg class="ill" id="ill2" viewBox="0 0 300 120" aria-hidden="true"><rect width="300" height="120" fill="#EFE0D5"/><rect x="95" y="6" width="110" height="114" rx="14" fill="#152217"/><rect x="101" y="14" width="98" height="106" rx="9" fill="#FDFBF8"/><g class="bb"><rect x="128" y="22" width="66" height="20" rx="8" fill="#D8845A"/><text x="161" y="35" text-anchor="middle" fill="#fff" style="font:600 8px Jost,sans-serif">Ich bin an der See!</text></g><g class="bb"><rect x="106" y="48" width="58" height="20" rx="8" fill="#E1A598"/><text x="135" y="61" text-anchor="middle" fill="#152217" style="font:600 8px Jost,sans-serif">В Австрии?</text></g><g class="bb"><rect x="148" y="74" width="46" height="34" rx="6" fill="#3E4E3D"/><path d="M152 104 l12 -14 l10 10 l6 -6 l10 10z" fill="#717054"/><circle cx="182" cy="84" r="4" fill="#D8845A"/></g></svg>
         <p>Пишу немецкой одногруппнице: <b>Ich bin an der See!</b></p>
         <p class="q">Она отвечает: в Австрии? Говорю, да. Она говорит, в Австрии нет моря.</p>
         <p>Говорю, а это что? Фоткаю воду. Отправляю.</p>
         <p class="punch">Вода, кстати, была очень мокрая.</p>
         <div class="pf"><i>Предисловие / Переписка</i><i>5</i></div></div></article>
-      <article class="post"><div class="pg"><span class="num">03</span>
+      <article class="post"><div class="pg"><span class="num">03</span><svg class="ill" id="ill3" viewBox="0 0 300 120" aria-hidden="true"><rect width="150" height="120" fill="#88483C"/><rect x="150" width="150" height="120" fill="#3E4E3D"/><g fill="none" stroke="#D8845A" stroke-width="5"><path d="M-10 96 l15 -9 l15 9 l15 -9 l15 9 l15 -9 l15 9 l15 -9 l15 9 l15 -9 l15 9 l15 -9"/></g><g class="whale"><path d="M34 74 q34 -26 70 0 q-34 14 -70 0z" fill="#152217"/><path d="M102 70 l14 -12 v22z" fill="#152217"/><g class="spout" fill="#EFE0D5"><circle cx="62" cy="54" r="3"/><circle cx="56" cy="44" r="2.5"/><circle cx="68" cy="44" r="2.5"/></g></g><g class="supb"><rect x="190" y="92" width="64" height="6" fill="#D8845A"/><circle cx="222" cy="62" r="7" fill="#E1A598"/><rect x="217" y="70" width="10" height="22" fill="#88483C"/><line x1="232" y1="66" x2="244" y2="98" stroke="#152217" stroke-width="3"/></g><text x="75" y="22" text-anchor="middle" fill="#EFE0D5" style="font:700 15px Oswald,sans-serif">DIE SEE</text><text x="225" y="22" text-anchor="middle" fill="#EFE0D5" style="font:700 15px Oswald,sans-serif">DER SEE</text><circle cx="150" cy="60" r="16" fill="#EFE0D5"/><text x="150" y="67" text-anchor="middle" fill="#152217" style="font:700 20px Oswald,sans-serif">≠</text></svg>
         <p class="q">Она говорит, это der See. Озеро. А die See это море.</p>
         <p>Говорю, какая разница, вода же. Она говорит, в die See плавают киты. А в твоём der See плавает пенсионер на сапе.</p>
         <p>И пишет: правильно <b>Ich bin am See</b>.</p>
         <p class="punch">Am. Не an der.</p>
         <div class="pf"><i>Предисловие / Разбор</i><i>6</i></div></div></article>
-      <article class="post"><div class="pg"><span class="num">04</span>
+      <article class="post"><div class="pg"><span class="num">04</span><svg class="ill" id="ill4" viewBox="0 0 300 120" aria-hidden="true"><rect width="300" height="120" fill="#EFE0D5"/><rect y="70" width="300" height="50" fill="#3E4E3D"/><g stroke="#EFE0D5" stroke-width="3"><line x1="20" y1="90" x2="60" y2="90"/><line x1="230" y1="104" x2="280" y2="104"/></g><g class="tail" opacity=".5"><path d="M250 70 q-8 -16 -20 -18 q14 0 20 10 q6 -10 20 -10 q-12 2 -20 18z" fill="#152217"/><text x="272" y="44" fill="#C9473B" style="font:700 16px Oswald,sans-serif">?</text></g><g class="supb2"><rect x="100" y="76" width="74" height="7" fill="#D8845A"/><circle cx="134" cy="40" r="8" fill="#E1A598"/><rect x="128" y="49" width="12" height="27" fill="#88483C"/><g class="arm"><rect x="138" y="50" width="22" height="5" fill="#88483C"/></g><line x1="122" y1="46" x2="114" y2="82" stroke="#152217" stroke-width="3"/></g></svg>
         <p>Смотрю на воду. По воде плывёт пенсионер на сапе.</p>
         <p>Машет мне. Я машу в ответ.</p>
         <p>Теперь я знаю разницу между озером и морем. По артиклю.</p>
         <p class="punch">Кит, кстати, так и не приплыл.</p>
         <div class="pf"><i>Предисловие / Мораль</i><i>7</i></div></div></article>
     </div>
+    <div class="oband" aria-hidden="true"><div class="otrk"><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg></div></div>
     <p class="moral rv">Одно слово. Два артикля. <b>Озеро и море.</b> Сегодня разбираем таких двойников. Их больше, чем кажется.</p>
   </div>
 </section>
@@ -512,7 +547,7 @@ html.gs .rv{transition:none}
         <h2 class="sh">Содержание</h2>
         <nav class="toc" aria-label="Содержание">
           <a href="#platform-idea"><div><b>Бренд-платформа</b><span>1.1 Позиционирование · 1.2 Правила</span></div><span class="n">08</span></a>
-          <a href="#pairs"><div><b>Пары-двойники</b><span>2.1 Четырнадцать плиток с подвохом</span></div><span class="n">12</span></a>
+          <a href="#pairs"><div><b>Пары-двойники</b><span>2.1 Плитки с подвохом · 2.2 Оборотни</span></div><span class="n">12</span></a>
           <a href="#band"><div><b>Входные билеты</b><span>3.1 der, die, das Band</span></div><span class="n">28</span></a>
           <a href="#leiter"><div><b>Недопустимые варианты</b><span>4.1 der Leiter, die Leiter, die Leiterin</span></div><span class="n">36</span></a>
         </nav>
@@ -595,6 +630,31 @@ html.gs .rv{transition:none}
     </div>
   </div>
 </section>
+
+<!-- 2.2 SHAPE SHIFTER -->
+<section id="shift" style="padding-top:20px">
+  <div class="wrap">
+    <div class="pg shf" id="shf">
+      <h2 class="sh"><span class="no">2.2</span> Оборотни</h2>
+      <p class="tx" style="margin-bottom:6px">Листай вниз. Те же четырнадцать палочек перестраиваются, как буквы в слове, когда меняется артикль.</p>
+      <svg id="shSvg" viewBox="0 0 300 280" role="img" aria-label="Фигура меняется вместе со значением слова">
+        <rect width="300" height="280" fill="#EFE0D5"/>
+        <g id="dk0"><path d="M60 118 q90 -46 180 0 v12 q-90 -40 -180 0z" fill="#E1A598"/><path d="M60 196 q90 46 180 0 v-12 q-90 40 -180 0z" fill="#E1A598"/><path d="M40 112 q110 -70 220 0" fill="none" stroke="#88483C" stroke-width="10"/><path d="M40 202 q110 70 220 0" fill="none" stroke="#88483C" stroke-width="10"/></g>
+        <g id="dk1" opacity="0"><circle cx="240" cy="54" r="18" fill="#D8845A"/><g fill="#fff"><circle cx="70" cy="60" r="3"/><circle cx="90" cy="96" r="2"/><circle cx="220" cy="120" r="2.5"/><circle cx="60" cy="150" r="2"/></g></g>
+        <g id="dk2" opacity="0"><circle cx="150" cy="140" r="104" fill="none" stroke="#152217" stroke-width="3" stroke-dasharray="4 6"/><circle cx="150" cy="140" r="18" fill="#152217"/><circle cx="150" cy="140" r="7" fill="#D8845A"/></g>
+        <g id="dk3" opacity="0"><circle cx="232" cy="66" r="26" fill="#D8845A"/><text x="232" y="76" text-anchor="middle" fill="#fff" style="font:700 28px Oswald,sans-serif">€</text><rect x="40" y="248" width="220" height="6" fill="#717054"/></g>
+        <g id="dk4" opacity="0"><ellipse cx="150" cy="200" rx="128" ry="52" fill="#3E4E3D"/><path d="M28 170 L48 110 L68 170Z" fill="#717054"/><path d="M232 172 L254 104 L276 172Z" fill="#717054"/><circle cx="150" cy="64" r="22" fill="#D8845A"/></g>
+        <g id="dk5" opacity="0"><rect x="0" y="140" width="300" height="140" fill="#88483C"/><path d="M196 136 h66 l-12 16 h-42z" fill="#152217"/><path d="M228 132 v-50 l-26 44z" fill="#FDFBF8"/><circle cx="70" cy="60" r="22" fill="#D8845A"/></g>
+        <g id="pcs"></g>
+      </svg>
+      <div class="shcap"><p class="shword de"><span class="shart" id="shArt">der</span> <span id="shW">Kiefer</span></p><p class="shru" id="shRu">челюсть. Mein Kiefer tut weh. Зубы на месте. Пока.</p></div>
+      <div class="ctrl"><button class="say" id="shSay" type="button" data-say="der Kiefer" aria-label="Послушать"><svg class="ic"><use href="#i-volume-2"/></svg></button><div class="shdots" id="shDots" role="group" aria-label="Этапы"></div></div>
+      <div class="pf"><i>Гайд «Хранители артиклей» / Стилеобразующие элементы / Оборотни</i><i>24–27</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="oband" aria-hidden="true"><div class="otrk"><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg></div></div>
 
 <!-- 3. BAND tickets -->
 <section id="band">
@@ -702,6 +762,8 @@ html.gs .rv{transition:none}
   </div>
 </section>
 
+<div class="oband" aria-hidden="true"><div class="otrk"><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg><svg viewBox="0 0 1200 70" preserveAspectRatio="none"></svg></div></div>
+
 <!-- 7. QUIZ -->
 <section id="quiz">
   <div class="wrap">
@@ -803,6 +865,47 @@ function artikelInit(){
     }
     svg.innerHTML = h;
   }
+  function patSVG(seed, n, bg, sw){
+    var r = rnd(seed), cols = [C.or, C.red, C.gr, C.pink, C.ol, C.terra, C.cream].filter(function(c){ return c !== bg; }), h = '', tries = 0;
+    while(n > 0 && tries++ < 400){
+      var x = 6 + r() * 88, y = 6 + r() * 88, dx = x - 50, dy = y - 50;
+      if(dx * dx + dy * dy < 36 * 36) continue;
+      var rot = Math.round(r() * 4) * 90, sc = .22 + r() * .14;
+      h += '<g transform="translate(' + x.toFixed(1) + ' ' + y.toFixed(1) + ') rotate(' + rot + ') scale(' + sc.toFixed(2) + ')"><path pathLength="1" d="' + SH[Math.floor(r() * SH.length)] + '" stroke="' + cols[Math.floor(r() * cols.length)] + '" style="stroke-width:' + (sw || 9) + '"/></g>';
+      n--;
+    }
+    return h;
+  }
+  // hero: ornament pieces around the cover (CSS-animated, above the fold)
+  (function(){
+    var svg = $('#horn'); if(!svg) return;
+    var r = rnd(3), cols = [C.or, C.red, C.gr, C.pink, C.ol, C.terra], h = '', n = 0, tries = 0;
+    while(n < 18 && tries++ < 500){
+      var x = r() * 400, y = r() * 320;
+      if(!(x < 46 || x > 354 || y < 34 || y > 286)) continue;
+      h += '<g transform="translate(' + x.toFixed(0) + ' ' + y.toFixed(0) + ') rotate(' + (Math.round(r() * 4) * 90) + ') scale(' + (.5 + r() * .5).toFixed(2) + ')"><path d="' + SH[Math.floor(r() * SH.length)] + '" stroke="' + cols[n % cols.length] + '" style="--d:' + (.5 + n * .06).toFixed(2) + '"/></g>';
+      n++;
+    }
+    svg.innerHTML = h;
+  })();
+  // ornament marquee bands
+  $$('.oband').forEach(function(band, bi){
+    var r = rnd(17 + bi * 31), cols = [C.or, C.red, C.gr, C.pink, C.ol, C.terra, C.ink], h = '';
+    for(var x = 20; x < 1190; x += 58 + r() * 26){
+      h += '<g transform="translate(' + x.toFixed(0) + ' ' + (16 + r() * 22).toFixed(0) + ') rotate(' + (Math.round(r() * 4) * 90 + (r() - .5) * 16).toFixed(0) + ') scale(' + (.5 + r() * .25).toFixed(2) + ')"><path d="' + SH[Math.floor(r() * SH.length)] + '" stroke="' + cols[Math.floor(r() * cols.length)] + '"/></g>';
+    }
+    $$('svg', band).forEach(function(sv){ sv.innerHTML = h; });
+    if(!ANIM) return;
+    var trk = $('.otrk', band), dir = bi % 2 ? 1 : -1;
+    var loop = G.fromTo(trk, {xPercent:dir < 0 ? 0 : -50}, {xPercent:dir < 0 ? -50 : 0, duration:40, ease:'none', repeat:-1, paused:true});
+    whenVisible(band, function(){ loop.play(); }, function(){ loop.pause(); }, 0);
+    ScrollTrigger.create({trigger:band, start:'top bottom', end:'bottom top', onUpdate:function(self){
+      var v = self.getVelocity();
+      G.to(loop, {timeScale:1 + Math.min(Math.abs(v) / 250, 8), duration:.2, overwrite:true});
+      G.to(loop, {timeScale:1, duration:1.2, delay:.25, overwrite:false});
+      G.to(band, {skewX:G.utils.clamp(-8, 8, v / -300), duration:.4, overwrite:true});
+    }});
+  });
   ornament($('#orn1'), 7, 16); ornament($('#orn2'), 21, 12); ornament($('#orn3'), 42, 12); ornament($('#orn4'), 99, 16);
 
   /* ---------- reveal ---------- */
@@ -890,16 +993,22 @@ function artikelInit(){
     function bits(col){ var h = ''; for(var k = 0; k < 3; k++){ var pos = ['left:' + (8 + r() * 60).toFixed(0) + '%;bottom:8%', 'right:8%;top:' + (20 + r() * 50).toFixed(0) + '%', 'left:8%;top:' + (40 + r() * 30).toFixed(0) + '%'][k]; h += '<i class="bit" style="' + pos + ';background:' + col + '"></i>'; } return h; }
     box.innerHTML = T.map(function(t, i){
       return '<button class="fc" type="button" data-i="' + i + '" aria-label="' + t[0] + ' ' + t[1] + ' или ' + t[5] + ' ' + t[1] + '">' +
-        '<div class="fi"><div class="face a" style="background:' + t[4] + ';color:' + C.cream + '"><span class="art">' + t[0] + '</span><svg class="ic"><use href="#i-' + t[3] + '"/></svg>' + bits(C.cream + '88') + '</div>' +
-        '<div class="face b" style="background:' + t[8] + ';color:' + C.cream + '"><span class="art">' + t[5] + '</span><svg class="ic"><use href="#i-' + t[7] + '"/></svg>' + bits(C.ink + '55') + '</div></div>' +
+        '<div class="fi"><div class="face a" style="background:' + t[4] + ';color:' + C.cream + '"><svg class="pat" viewBox="0 0 100 100" aria-hidden="true">' + patSVG(100 + i, 9, t[4]) + '</svg><span class="art">' + t[0] + '</span><span class="med" style="color:' + t[4] + '"><svg class="ic"><use href="#i-' + t[3] + '"/></svg></span></div>' +
+        '<div class="face b" style="background:' + t[8] + ';color:' + C.cream + '"><svg class="pat" viewBox="0 0 100 100" aria-hidden="true">' + patSVG(200 + i, 9, t[8]) + '</svg><span class="art">' + t[5] + '</span><span class="med" style="color:' + t[8] + '"><svg class="ic"><use href="#i-' + t[7] + '"/></svg></span></div></div>' +
         '<div class="fcap"><span class="s1"><b class="de">' + t[0] + ' ' + t[1] + '</b>' + t[2] + '</span><span class="s2"><b class="de">' + t[5] + ' ' + t[1] + '</b>' + t[6] + '. ' + t[9] + '</span></div></button>';
     }).join('');
     var tiles = $$('.fc', box), demoed = false, touched = false;
-    tiles.forEach(function(b){ b.onclick = function(){ touched = true; b.classList.toggle('on'); var t = T[+b.dataset.i]; say(b.classList.contains('on') ? t[11] : t[10]); }; });
+    function drawFace(b){
+      if(!ANIM) return; var f = $(b.classList.contains('on') ? '.face.b' : '.face.a', b);
+      G.fromTo($$('.pat path', f), {strokeDashoffset:1}, {strokeDashoffset:0, duration:.6, ease:'power2.out', stagger:.04, delay:.25});
+      G.fromTo($('.med', f), {scale:.5, rotation:-30}, {scale:1, rotation:0, duration:.8, ease:'elastic.out(1,.45)', delay:.2});
+    }
+    tiles.forEach(function(b){ b.onclick = function(){ touched = true; b.classList.toggle('on'); drawFace(b); var t = T[+b.dataset.i]; say(b.classList.contains('on') ? t[11] : t[10]); }; });
+    if(ANIM) ScrollTrigger.batch(tiles, {start:'top 90%', once:true, onEnter:function(b){ b.forEach(function(t, i){ G.fromTo($$('.face.a .pat path', t), {strokeDashoffset:1}, {strokeDashoffset:0, duration:.7, ease:'power2.out', stagger:.03, delay:.3 + i * .07}); }); }});
     if(ANIM) ScrollTrigger.batch(tiles, {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:60, rotation:function(){ return G.utils.random(-12, 12); }, scale:.8, duration:.8, ease:'back.out(1.8)', stagger:.07}); }});
     if(!reduce) whenVisible(box, function(){
       if(demoed || touched) return; demoed = true;
-      tiles.slice(0, 6).forEach(function(t, i){ setTimeout(function(){ if(!touched) t.classList.add('on'); }, 600 + i * 180); setTimeout(function(){ if(!touched) t.classList.remove('on'); }, 2600 + i * 180); });
+      tiles.slice(0, 6).forEach(function(t, i){ setTimeout(function(){ if(!touched){ t.classList.add('on'); drawFace(t); } }, 600 + i * 180); setTimeout(function(){ if(!touched) t.classList.remove('on'); }, 2600 + i * 180); });
     }, null, .3);
   })();
 
@@ -963,16 +1072,26 @@ function artikelInit(){
   (function(){
     var B = [['der Joghurt','das Joghurt','В Германии чаще der. В Австрии das'],['die Cola','das Cola','die на севере. das на юге Германии и в Австрии'],['die E-Mail','das E-Mail','das часто в Австрии и Швейцарии'],['der Keks','das Keks','В Австрии das Keks'],['der Liter','das Liter','Оба правильные. Чаще der'],['das Virus','der Virus','Правильно das. В разговоре часто der']];
     var cols = [C.red, C.gr, C.or, C.terra, C.ol, C.ink], box = $('#ballsBox');
-    box.innerHTML = B.map(function(b, i){ return '<button class="ball" type="button" data-i="' + i + '" aria-label="' + b[0] + ' или ' + b[1] + '"><span class="str"></span><span class="cap"></span><span class="sph" style="background:' + cols[i] + '"><b class="de">' + b[0] + '<small>нажми</small></b></span><span class="bcap">' + b[2] + '</span></button>'; }).join('');
+    box.innerHTML = B.map(function(b, i){ return '<button class="ball" type="button" data-i="' + i + '" aria-label="' + b[0] + ' или ' + b[1] + '"><span class="str"></span><span class="cap"></span><span class="sph" style="background:' + cols[i] + '"><svg class="pat" viewBox="0 0 100 100" aria-hidden="true">' + patSVG(300 + i, 10, cols[i], 8) + '</svg><b class="de">' + b[0] + '<small>нажми</small></b></span><span class="bcap">' + b[2] + '</span></button>'; }).join('');
     $$('.ball', box).forEach(function(el){
       var b = B[+el.dataset.i], on = false;
       el.onclick = function(){
         on = !on; var sph = $('.sph', el);
-        function swap(){ $('.sph b', el).innerHTML = (on ? b[1] : b[0]) + '<small>' + (on ? 'тоже можно' : 'нажми') + '</small>'; }
+        function swap(){ $('.sph b', el).innerHTML = (on ? b[1] : b[0]) + '<small>' + (on ? 'тоже можно' : 'нажми') + '</small>'; if(ANIM) G.fromTo($$('.pat path', el), {strokeDashoffset:1}, {strokeDashoffset:0, duration:.7, stagger:.03}); }
         if(ANIM){ G.to(sph, {rotationY:90, duration:.2, ease:'power2.in', onComplete:function(){ swap(); G.fromTo(sph, {rotationY:-90}, {rotationY:0, duration:.6, ease:'back.out(2)'}); }}); } else swap();
         say(on ? b[1] : b[0]);
       };
     });
+    (function garland(){
+      var g = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); g.setAttribute('class', 'garl'); g.setAttribute('aria-hidden', 'true'); box.appendChild(g);
+      function draw(){
+        var w = Math.round(g.getBoundingClientRect().width) || 360, q = w / 8, d = 'M0 8', bulbs = '', bc = [C.or, C.pink, '#F6E7B0', C.terra];
+        for(var k = 0; k < 4; k++) d += ' Q' + (q * (2 * k + 1)).toFixed(0) + ' 40 ' + (q * (2 * k + 2)).toFixed(0) + ' 8';
+        for(var j = 1; j < 16; j++){ var x = j * w / 16, t = (x % (2 * q)) / (2 * q), y = 8 + 64 * t * (1 - t); bulbs += '<circle cx="' + x.toFixed(0) + '" cy="' + (y + 5).toFixed(0) + '" r="4.5" fill="' + bc[j % 4] + '" style="--d:' + (j % 5 * .3).toFixed(1) + '"/>'; }
+        g.setAttribute('viewBox', '0 0 ' + w + ' 48'); g.innerHTML = '<path d="' + d + '"/>' + bulbs;
+      }
+      draw(); window.addEventListener('resize', draw);
+    })();
     if(ANIM) ScrollTrigger.batch($$('.ball', box), {start:'top 92%', once:true, onEnter:function(b){ G.from(b, {y:-140, duration:1.1, ease:'bounce.out', stagger:.1}); }});
   })();
 
@@ -981,6 +1100,72 @@ function artikelInit(){
     var P = [['#d8845a','der See · die See','озеро · море',0],['#88483c','der Leiter · die Leiter','начальник · лестница',0],['#3e4e3d','das Steuer · die Steuer','руль · налог',0],['#efe0d5','das Gehalt · der Gehalt','зарплата · содержание',1],['#e1a598','der Kiefer · die Kiefer','челюсть · сосна',1],['#152217','die · der · das Band','группа · том · лента',0],['#717054','das Schild · der Schild','табличка · щит',0],['#ca7663','der Teil · das Teil','часть · деталь',0]];
     var r = rnd(13);
     $('#pal').innerHTML = P.map(function(p){ return '<div class="sw' + (p[3] ? ' lt' : '') + '" style="background:' + p[0] + ';rotate:' + ((r() - .5) * 5).toFixed(1) + 'deg"><span class="hx">' + p[0] + '</span><span class="pr de">' + p[1] + '<small>' + p[2] + '</small></span></div>'; }).join('');
+  })();
+
+  /* ---------- story illustrations ---------- */
+  if(ANIM){
+    [['#ill1', function(){ return G.to('#ill1 .swan', {x:10, y:-3, duration:1.8, ease:'sine.inOut', yoyo:true, repeat:-1}); }],
+     ['#ill2', function(){ return G.timeline({repeat:-1, repeatDelay:1}).from('#ill2 .bb', {scale:0, transformOrigin:'50% 50%', duration:.45, ease:'back.out(3)', stagger:.8}).to('#ill2 .bb', {opacity:0, duration:.3}, '+=1.6'); }],
+     ['#ill3', function(){ var t = G.timeline({repeat:-1}); t.to('#ill3 .whale', {y:-6, rotation:-3, svgOrigin:'70 74', duration:1.2, ease:'sine.inOut', yoyo:true, repeat:1}, 0).fromTo('#ill3 .spout', {y:8, opacity:0}, {y:-6, opacity:1, duration:.8, ease:'power2.out'}, .2).to('#ill3 .spout', {opacity:0, duration:.4}, 1.2).to('#ill3 .supb', {y:-3, duration:.6, ease:'sine.inOut', yoyo:true, repeat:3}, 0); return t; }],
+     ['#ill4', function(){ var t = G.timeline({repeat:-1}); t.to('#ill4 .arm', {rotation:-35, svgOrigin:'139 52', duration:.35, ease:'sine.inOut', yoyo:true, repeat:5}, 0).to('#ill4 .supb2', {y:-3, duration:.7, ease:'sine.inOut', yoyo:true, repeat:3}, 0).to('#ill4 .tail', {opacity:.15, duration:1.4, yoyo:true, repeat:1}, 0); return t; }]
+    ].forEach(function(a){ var el = $(a[0]); if(!el) return; var tl = a[1](); tl.pause(); whenVisible(el, function(){ tl.play(); }, function(){ tl.pause(); }, .1); });
+  }
+
+  /* ---------- 2.2 shape shifter (scroll-driven) ---------- */
+  (function(){
+    var host = $('#shf'); if(!host) return;
+    var NS = 'http://www.w3.org/2000/svg', pcs = $('#pcs'), P = [], L = [[], [], [], [], [], []], k, a;
+    for(k = 0; k < 7; k++){ a = (-54 + k * 18) * Math.PI / 180; L[0].push([150 + 100 * Math.sin(a), 122 + 24 * (1 - Math.cos(a)), 22, 32, a * 28, '#fff']); }
+    for(k = 0; k < 7; k++){ a = (-54 + k * 18) * Math.PI / 180; L[0].push([150 + 100 * Math.sin(a), 194 - 24 * (1 - Math.cos(a)), 22, 30, -a * 28, '#fff']); }
+    for(k = 0; k < 12; k++) L[1].push([150, 52 + k * 14, 18 + k * 15, 10, 0, k % 2 ? '#717054' : '#3E4E3D']);
+    L[1].push([150, 236, 18, 28, 0, '#88483C']); L[1].push([150, 254, 220, 8, 0, '#C4A27A']);
+    for(k = 0; k < 6; k++){ a = k * 60; L[2].push([150 + 46 * Math.cos(a * Math.PI / 180), 140 + 46 * Math.sin(a * Math.PI / 180), 92, 10, a, '#152217']); }
+    for(k = 0; k < 8; k++){ a = k * 45 + 22.5; L[2].push([150 + 92 * Math.cos(a * Math.PI / 180), 140 + 92 * Math.sin(a * Math.PI / 180), 70, 13, a + 90, '#88483C']); }
+    [[92, 5], [150, 5], [208, 4]].forEach(function(st){ for(var j = 0; j < st[1]; j++) L[3].push([st[0], 236 - j * 14, 52, 11, 0, j % 2 ? '#CA7663' : '#D8845A']); });
+    [[182, 4], [200, 5], [218, 5]].forEach(function(row){ for(var j = 0; j < row[1]; j++) L[4].push([150 + (j - (row[1] - 1) / 2) * 44, row[0], 30, 5, 0, '#EFE0D5']); });
+    for(k = 0; k < 14; k++){ var rw = k < 7 ? 0 : 1, j2 = k % 7; L[5].push([30 + j2 * 40, rw ? 226 : 176, 46, 11, j2 % 2 ? -32 : 32, rw ? '#EFE0D5' : '#D8845A']); }
+    for(k = 0; k < 14; k++){ var g = document.createElementNS(NS, 'g'), r = document.createElementNS(NS, 'rect'); g.appendChild(r); pcs.appendChild(g); P.push([g, r]); }
+    var S = [
+      ['der', 'Kiefer', 'челюсть. «Mein Kiefer tut weh». Зубы на месте. Пока.', 'der Kiefer. Mein Kiefer tut weh.'],
+      ['die', 'Kiefer', 'сосна. Те же буквы, другой артикль. Зубы стали ветками.', 'die Kiefer. Die Kiefer ist hoch.'],
+      ['das', 'Steuer', 'руль. Держишь руками и едешь куда хочешь.', 'das Steuer. Ich sitze am Steuer.'],
+      ['die', 'Steuer', 'налог. Руль теперь держит налоговая.', 'die Steuer. Ich zahle die Steuer.'],
+      ['der', 'See', 'озеро. Тихо, ровно, лебеди.', 'der See. Der See ist ruhig.'],
+      ['die', 'See', 'море. Те же палочки, только с волнами и характером.', 'die See. Die See ist wild.']
+    ];
+    var dots = $('#shDots'), cur = -1, st = null;
+    dots.innerHTML = S.map(function(_, i){ return '<button type="button" data-st="' + i + '" aria-pressed="false" aria-label="Этап ' + (i + 1) + '">' + (i + 1) + '</button>'; }).join('');
+    function place(i){
+      P.forEach(function(p, k){
+        var v = L[i][k];
+        if(G){ G.set(p[0], {x:v[0], y:v[1], rotation:v[4]}); G.set(p[1], {attr:{x:-v[2] / 2, y:-v[3] / 2, width:v[2], height:v[3], fill:v[5]}}); }
+        else { p[0].setAttribute('transform', 'translate(' + v[0] + ' ' + v[1] + ') rotate(' + v[4] + ')'); p[1].setAttribute('x', -v[2] / 2); p[1].setAttribute('y', -v[3] / 2); p[1].setAttribute('width', v[2]); p[1].setAttribute('height', v[3]); p[1].setAttribute('fill', v[5]); }
+      });
+      for(var d = 0; d < 6; d++) $('#dk' + d).setAttribute('opacity', d === i ? 1 : 0);
+    }
+    function cap(i){
+      if(i === cur) return; var prev = cur; cur = i;
+      $('#shArt').textContent = S[i][0]; $('#shW').textContent = S[i][1]; $('#shRu').textContent = S[i][2]; $('#shSay').dataset.say = S[i][3];
+      $$('button', dots).forEach(function(b){ b.setAttribute('aria-pressed', +b.dataset.st === i); });
+      if(ANIM && prev >= 0){ G.fromTo('#shArt', {yPercent:-60, rotation:-12}, {yPercent:0, rotation:0, duration:.5, ease:'back.out(3)'}); G.fromTo('#shRu', {x:14}, {x:0, duration:.4, ease:'power2.out'}); }
+    }
+    place(0); cap(0);
+    if(ANIM){
+      var SEG = 1.5, tl = G.timeline({paused:true, onUpdate:function(){ cap(stage(tl.time())); }});
+      for(var i = 1; i < 6; i++){
+        (function(i){
+          var t0 = (i - 1) * SEG + .25;
+          P.forEach(function(p, k){ var v = L[i][k]; tl.to(p[0], {x:v[0], y:v[1], rotation:v[4], duration:1, ease:'power2.inOut'}, t0 + k * .015); tl.to(p[1], {attr:{x:-v[2] / 2, y:-v[3] / 2, width:v[2], height:v[3], fill:v[5]}, duration:1, ease:'power2.inOut'}, t0 + k * .015); });
+          tl.to('#dk' + (i - 1), {opacity:0, duration:.5}, t0).to('#dk' + i, {opacity:1, duration:.6}, t0 + .45);
+        })(i);
+      }
+      tl.to({}, {duration:.4}, 5 * SEG + .25);
+      function stage(t){ var n = 0; for(var i = 1; i < 6; i++) if(t >= (i - 1) * SEG + .75) n = i; return n; }
+      st = ScrollTrigger.create({trigger:host, start:'top 60px', end:'+=2600', pin:true, scrub:.6, animation:tl});
+      $$('button', dots).forEach(function(b){ b.onclick = function(){ var i = +b.dataset.st, t = i ? (i - 1) * SEG + 1.3 : 0, y = st.start + (st.end - st.start) * t / tl.duration(); window.scrollTo({top:y, behavior:'smooth'}); }; });
+    } else {
+      $$('button', dots).forEach(function(b){ b.onclick = function(){ var i = +b.dataset.st; place(i); cap(i); }; });
+    }
   })();
 
   /* ---------- quiz ---------- */
@@ -1017,6 +1202,8 @@ function artikelInit(){
     var bl = $('#blank'); if(bl) bl.textContent = it.o[it.c];
     var qx = $('#qx');
     qx.innerHTML = '<svg class="ic"><use href="#i-' + (ok ? 'circle-check' : 'circle-x') + '"/></svg><span>' + (ok ? '<b>Верно.</b> ' : '<b>Мимо.</b> ') + it.x + '</span>';
+    var stp = document.createElement('span'); stp.className = 'stamp' + (ok ? '' : ' bad'); stp.textContent = ok ? 'Верно' : 'Мимо'; qz.appendChild(stp);
+    if(ANIM) G.fromTo(stp, {scale:3, rotation:-40, opacity:0}, {scale:1, rotation:-12, opacity:1, duration:.5, ease:'back.out(2)'});
     if(ok) burst(14);
     say(it.q.replace('___', it.o[it.c]));
     $('.qbar', qz).outerHTML = bar();
